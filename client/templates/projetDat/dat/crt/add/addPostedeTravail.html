@@ -1,0 +1,42 @@
+<template name="addPostedeTravail">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Poste de Travail</h7>
+            </div>
+        </div>
+            <table>
+                <tbody>
+                    {{#each pdts }}
+                    <tr>{{> inputpdt }}</tr>   
+                    {{/each}}
+                </tbody>
+            </table>                
+    </div>
+</template>
+
+<template name="inputpdt">
+    <div class="card-content pdtitem" id="{{_id}}">
+        <td class="finput col s4">
+        <select name="selectPDT" >
+            {{#each typepdt}}
+              {{> optionpdt}}
+            {{/each}}
+          </select>
+        </td>
+        <td class="finput col s7">
+          <input type="text" name="nom" placeholder="" value="{{name}}" class="nom">
+        </td>
+        <td class="input-field col s1">
+             <a href="" class="deletePDT"><i class="material-icons purple-text text-accent-3">delete</i></a>
+        </td>
+    </div>
+</template>
+
+<template name="optionpdt">
+  {{#if equals _id postedetravail.typePdT}}
+  <option value="{{_id}}"  selected="selected">{{name}}</option>
+   {{else}}
+  <option value="{{_id}}">{{name}}</option>
+   {{/if}}
+</template>

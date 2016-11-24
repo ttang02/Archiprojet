@@ -1,0 +1,15 @@
+<template name="userDeleteModal">
+	<a id="trigger-delete-{{ _id }}" class="modal-trigger waves-effect waves-light btn-floating secondary-content" href="#delete-{{ _id }}">
+		<i class="material-icons">delete</i>
+	</a>
+		<div id="delete-{{ _id }}" class="modal modal-fixed-footer">
+			<div class="modal-content">
+	      <h4> Demande de confirmation</h4>
+				  <p> Êtes-vous sûr de vouloir cet utilisateur :  {{ profile.firstname }} {{ profile.lastname }} </p>
+			</div>
+			<div class="modal-footer">
+				<a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat" id="deleteUser">Effacer</a>
+				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" id="cancelUser">Annuler</a>
+			</div>
+		</div>
+</template>

@@ -1,0 +1,29 @@
+<template name="adminAddUser">
+    <!-- Modal Trigger -->
+    <a id="triggerAddUser" class="modal-trigger waves-effect waves-light btn" href="#modalAddUser">Ajouter un utilisateur</a>
+    
+    <!-- Modal Structure -->
+    <div id="modalAddUser" class="modal modal-fixer-footer">
+        <div class="modal-content">
+            <h4>Ajouter un utilisateur</h4>
+            
+            <form>
+                <label for="username">Identifiant</label>
+                <input type="text" name="username"/>
+                <label for="password">Mot de passe</label>
+                <input type="password" name="password"/>
+                <label for="repeatPassword">Répéter le mot de passe</label>
+                <input type="password" name="repeatPassword"/>
+                <label for="firstname">Prénom</label>
+                <input type="text" name="firstname"/>
+                <label for="lastname">Nom</label>
+                <input type="text" name="lastname"/>
+                <label for="email">Email</label>
+                <input type="email" name="email" />
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a id="addUser" href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Ajouter</a>
+        </div>
+    </div>
+</template>

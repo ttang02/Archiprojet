@@ -1,0 +1,58 @@
+<template name="addActeurProjet">
+    <div class="row">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-content white-text">
+                <h7 style="text-align:center;"><center>Acteurs projet</center></h7>
+            </div>
+        </div>
+          <table>
+            <thead>
+                  <th data-field="acteur" class="col s2">Rôle</th>
+                  <th data-field="name" class="col s3">Nom</th>
+                  <th data-field="fonction" class="col s3">Fonction</th>
+                  <th data-field="entite" class="col s3">Entite</th>
+            </thead>
+            <tbody>
+            {{#each actprojs}}
+                <tr>
+                {{> inputacteurproj }}
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+    </div>
+</template>
+
+<template name="inputacteurproj">
+    <div class="card-content actPitem" id="{{_id}}">
+        <td class="finput col s2">
+        <select name="selectAP">
+            {{#each typeActeurs}}
+              {{> optionActeur}}
+            {{/each}}
+          </select>
+        </td>
+        <td class="finput col s3">
+          <input type="text" name="nom" placeholder="" value="{{nom}}" class="nom">
+        </td>
+        <td class="finput col s3">
+          <input type="text" name="fonction" placeholder="" value="{{fonction}}" class="fonction">
+        </td>
+        <td class="finput col s3">
+          <input type="text" name="entite" placeholder="" value="{{entite}}" class="entite">
+        </td>
+        <td class="input-field col s1">
+             <a href="" class="deleteActProjet"><i class="material-icons purple-text text-accent-3">delete</i></a>
+        </td>
+    </div>
+</template>
+
+<template name="optionActeur">
+  {{#if equals _id acteurProjet.typeActeur}}
+  <option value="{{_id}}"  selected="selected">{{name}}</option>
+   {{else}}
+  <option value="{{_id}}">{{name}}</option>
+   {{/if}}
+</template>

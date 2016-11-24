@@ -1,0 +1,46 @@
+<template name="addFoncMetier">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Fonctionnalités métier</h7>
+            </div>
+        </div>
+            <table>
+                <thead>
+                    <th data-field="fonc" class="col s7">Fonctionnalités métier</th>
+                    <th data-field="min" class="col s1">M</th>
+                    <th data-field="rie" class="col s1">R</th>
+                    <th data-field="ext" class="col s1">E</th>
+                    <th data-field="pub" class="col s1">P</th>
+                </thead>
+                <tbody>
+                    {{#each fms}}
+                        <tr>{{>inputfm}}</tr>
+                    {{/each}}
+                </tbody>
+            </table>                
+    </div>
+</template>
+
+<template name="inputfm">
+   <div class="card-action fmitem" id="{{_id}}">
+         <td class="finput col s7">
+            <input type="text" name="fm" value="{{name}}" placeholder="Fonctionnalité métier" class="fm">
+         </td>
+        <td class="finput col s1 min">
+            <input name="min" type="checkbox" id="{{_id}}-min" checked="{{#if min}}checked{{/if}}" /><label for="{{_id}}-min"></label>
+        </td>
+        <td class="finput col s1 rie">
+            <input name="rie" type="checkbox" id="{{_id}}-rie" checked="{{#if rie}}checked{{/if}}" /><label for="{{_id}}-rie"></label>
+        </td>
+        <td class="finput col s1 ext">
+            <input name="ext" type="checkbox" id="{{_id}}-ext" checked="{{#if ext}}checked{{/if}}"><label for="{{_id}}-ext"></label>
+        </td>
+        <td class="finput col s1 pub">
+            <input name="pub" type="checkbox" id="{{_id}}-pub" checked="{{#if pub}}checked{{/if}}" /><label for="{{_id}}-pub"></label>
+        </td>
+        <td class="input-field col s1">
+            <a href="" class="deleteFm"><i class="material-icons green-text text-accent-3">delete</i></a>
+         </td>
+      </div>
+</template>

@@ -1,0 +1,38 @@
+<template name="addDependance">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Dépendances avec autres systèmes (SI)</h7>
+            </div>
+        </div>
+            <table>
+                <thead>
+                    <th data-field="fonc" class="col s7">SI</th>
+                    <th data-field="con" class="col s2">Consommateur</th>
+                    <th data-field="fou" class="col s2">Fournisseur</th>
+                </thead>
+                <tbody>
+                    {{#each depens }}
+                    <tr>{{> inputDepen }}</tr>   
+                    {{/each}}
+                </tbody>
+            </table>                
+    </div>
+</template>
+
+<template name="inputDepen">
+   <div class="card-action depenitem" id="{{_id}}">
+         <td class="finput col s7">
+            <input type="text" name="si" value="{{si}}" placeholder="" class="si">
+         </td>
+        <td class="finput col s2 con">
+            <input name="consommateur" type="checkbox" id="{{_id}}-con" checked="{{#if consommateur}}checked{{/if}}" /><label for="{{_id}}-con"></label>
+        </td>
+        <td class="finput col s2 fou">
+            <input name="fournisseur" type="checkbox" id="{{_id}}-fou" checked="{{#if fournisseur}}checked{{/if}}" /><label for="{{_id}}-fou"></label>
+        </td>
+        <td class="input-field col s1">
+            <a href="" class="deleteDepen"><i class="material-icons green-text text-accent-3">delete</i></a>
+         </td>
+      </div>
+</template>

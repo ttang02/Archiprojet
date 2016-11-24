@@ -1,0 +1,70 @@
+<template name="viewESP">
+    <div class="modal-content">
+        <h6>Eléments structurantes</h6>
+        {{ > viewObjectif }}
+        {{ > viewContexte }}
+        {{ > viewEnjeux }}
+        <!--{{ > viewContexte }}
+        {{ > viewEnjeux }}
+        {{ > viewPlanning }}
+        {{ > viewActeurProjet }}
+        {{ > viewActeurUsagers }} -->
+    </div>
+</template>
+
+<template name="viewObjectif">
+    <div class="col s12">
+            <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Objectifs</h7>
+            </div>
+        </div>
+    </div>
+    <table>
+    <tbody>
+    {{#each espObjectifs}}
+        <td class="col s12">
+            {{name}}
+        </td>
+    {{/each}}
+    </tbody>
+    </table>
+</template>
+
+<template name="viewContexte">
+    <div class="col s12">
+            <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Contexte</h7>
+            </div>
+        </div>
+    </div>
+    <table>
+    <tbody>
+    {{#each espContexte}}
+        <td class="col s12">
+            {{name}}
+        </td>
+    {{/each}}
+    </tbody>
+    </table>
+</template>
+
+<template name="viewEnjeux">
+    <div class="col s12">
+            <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Enjeux</h7>
+            </div>
+        </div>
+    </div>
+    <table>
+    <tbody>
+    {{#each enjs}}
+        <td class="col s12">
+            {{name}}
+        </td>
+    {{/each}}
+    </tbody>
+    </table>
+</template>

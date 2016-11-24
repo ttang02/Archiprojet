@@ -1,0 +1,38 @@
+<template name="addPlanning">
+    <div class="col s12">
+            <div class="card-medium blue darken-1">
+                <div class="card-content white-text">
+                    <h7 style="text-align:center;"><center>Planning projet</center></h7>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <th data-field="version" class="col s3">Version</th>
+                    <th data-field="date" class="col s4">Date (PROD)</th>
+                    <th data-field="commentaire" class="col s4">Commentaire</th>
+                </thead>
+                <tbody>
+                    {{#each plannings }}
+                    <tr>{{> inputplanning }}</tr>
+                    {{/each}}
+                </tbody>
+            </table>
+    </div>
+</template>
+
+<template name="inputplanning">
+    <div class="card-content planitem" id="{{_id}}">
+        <td class="finput col s3">
+            <input type="text" name="version" value="{{version}}" placeholder="" class="version">
+        </td>
+        <td class="finput col s4">
+            <input type="date" class="datepicker date" value="{{date}}" name="date">
+        </td>
+        <td class="finput col s4">
+            <input type="text" name="commentaire" value="{{commentaire}}" placeholder="" class="commentaire">
+        </td>
+        <td class="input-field col s1">
+            <a href="" class="deletePlanning"><i class="material-icons purple-text text-accent-3">delete</i></a>
+        </td>
+    </div>
+</template>

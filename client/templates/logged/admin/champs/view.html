@@ -1,0 +1,16 @@
+<template name="adminViewTypeAU">
+    <ul class="collection">
+		{{# each typeAU }}
+		<li class="collection-item row valign-wrapper">
+			<div class="col s6 valign">
+				{{ name }}
+			</div>
+			<div class="col s6">
+				<div id="typeAUdelete-{{ _id }}">
+					{{> adminRemovetypeAU}}
+				</div>
+			</div>
+		</li>
+		{{/ each }}
+	</ul>
+</template>

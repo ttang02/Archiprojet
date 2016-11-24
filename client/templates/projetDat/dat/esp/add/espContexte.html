@@ -1,0 +1,27 @@
+<template name="addContexte">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;"><center>Contexte</center></h7>
+            </div>
+        </div>
+        <table>
+            <tbody>
+                {{#each contextes}}
+                    <tr>{{> inputcontexte }}</tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>
+
+<template name="inputcontexte">
+    <div class="card-action contexteitem" id="{{_id}}">
+        <td class="finput col s11">
+            <input type="text" name="contexte" value="{{name}}" placeholder="Contexte" class="contexte">
+        </td>
+        <td class="input-field col s1">
+            <a href="" class="deleteContexte"><i class="material-icons purple-text text-accent-3">delete</i></a>
+        </td>
+    </div>
+</template>

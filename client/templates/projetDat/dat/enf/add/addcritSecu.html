@@ -1,0 +1,55 @@
+<template name="addCritSecurite">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Critère de sécurité de l'application</h7>
+            </div>
+        </div>
+            <table>
+                <thead>
+                    <th data-field="exigence" class="col s3">Exigence</th>
+                    <th data-field="description" class="col s9">Description Besoin</th>
+                </thead>
+                <tbody>
+                    {{#each exigence }}
+                    <tr>{{> inputcritexigences }}</tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <p>Si Etude de sécurité, reporter les infos dans ce tableau et indiquez ci-dessous le nom du document de référence contenant le résultat de celle-ci</p>
+            <table>
+            <tbody>
+                {{#with etude }}
+                    <tr>{{> inputcritetude }}</tr>
+                {{/with}}
+            </tbody>
+            </table>
+    </div>
+</template>
+
+
+<template name="inputcritexigences">
+    <div class="card-action critExigenceitem" id="{{_id}}">
+      <tr class="fc col s12">
+        <td class="finput col s3">
+          <input type="text" value="{{typeexigence}}" disabled>
+        </td>
+        <td class="finput col s9">
+          <input type="text" name="description" value="{{description}}" class="description">
+        </td>
+      </tr>
+    </div>
+</template>
+
+<template name="inputcritetude">
+  <div class="card-action critEtudeitem" id="{{_id}}">
+    <tr class="fc col s12">
+      <td class="finput col s3">
+        <input type="text" value="Etude sécurité" disabled>
+      </td>
+      <td class="finput col s9">
+        <input type="text" name="etude" value="{{etude}}" class="etude">
+      </td>
+    </tr>
+  </div>
+</template>

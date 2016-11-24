@@ -1,0 +1,21 @@
+<template name="adminRemovetypeAU">
+	<a id="trigger-delete-{{ _id }}" class="modal-trigger waves-effect waves-light btn-floating secondary-content" href="#delete-{{ _id }}">
+    <i class="material-icons">delete</i>
+  </a>
+
+  <!-- Modal structure -->
+  <div id="delete-{{ _id }}" class="modal modal-fixed-footer">
+		<div class="modal-content">
+      <h4> Demande de confirmation</h4>
+      <p> Êtes-vous sûr de vouloir effacer le type d'acteur usager {{name}} ?</p>
+      <p>Cette action réalisera les suivants :</p>
+      <ul class="collection">
+        <li class="collection-item">Suppression les acteurs usagers lié au type</li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-red btn-flat" id="deletetypeAU">Effacer</a>
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat" id="canceltypeAU">Annuler</a>
+		</div>
+	</div>
+</template>

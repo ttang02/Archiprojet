@@ -1,0 +1,91 @@
+<template name="addCritDispo">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Critère de disponibilité de l'application</h7>
+            </div>
+        </div>
+            <table>
+                <thead>
+                    <th data-field="periode" class="col s4">Période</th>
+                    <th data-field="debut" class="col s2">Début</th>
+                    <th data-field="fin" class="col s2">Fin</th>
+                    <th data-field="nbu" class="col s2">NBU</th>
+                    <th data-field="cht" class="col s2">CHT</th>
+                </thead>
+                <tbody>
+                    {{#each periode }}
+                    <tr>{{> inputcritDispoPeriode }}</tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <p>NBU : Nombre d'utilisateurs connectés en simultané à l'application</p>
+            <p>CHT : Charge transactionnelle et réseau générés par les traitements</p>
+            <table>
+                <tbody>
+                    {{#with description }}
+                    <tr>{{> inputcritDispoDescription }}</tr>
+                    {{/with}}
+                </tbody>
+            </table>
+            <p>Précisez les traitements occasionnant la charge (upload, import, etc...)</p>
+            <table>
+                <tbody>
+                    {{#each appmetier }}
+                    <tr>{{> inputcritDispoAppmetier }}</tr>
+                    {{/each}}
+                </tbody>
+            </table>
+    </div>
+</template>
+
+<template name="inputcritDispoPeriode">
+    <div class="card-action critDispoPeriodeitem" id="{{_id}}">
+      <tr class="fc col s12">
+        <td class="finput col s4">
+          <input type="text" value="{{typePeriodem}}" disabled>
+        </td>
+        <td class="finput col s2">
+          <input type="text" name="debut" value="{{debut}}" >
+        </td>
+        <td class="finput col s2">
+          <input type="text" name="fin" value="{{fin}}">
+        </td>
+        <td class="finput col s2">
+          <input type="text" name="nbu" value="{{nbu}}">
+        </td>
+        <td class="finput col s2">
+          <input type="text" name="cht" value="{{cht}}">
+        </td>
+      </tr>
+    </div>
+</template>
+
+<template name="inputcritDispoDescription">
+    <div class="card-action critDispoDescriptionitem" id="{{_id}}">
+    <tr class="fc col s12">
+      <td class="finput col s3">
+        <input type="text" value="Description charge" disabled>
+      </td>
+      <td class="finput col s9">
+        <input type="text" name="description" value="{{description}}">
+      </td>
+    </tr>
+  </div>
+</template>
+
+<template name="inputcritDispoAppmetier">
+    <div class="card-action critDispoAppmtieritem" id="{{_id}}">
+      <tr class="fc col s12">
+        <td class="finput col s8">
+          <input type="text" value="{{typeAppMetier typeappmetier}}" disabled>
+        </td>
+        <td class="finput col s2">
+          <input type="text" name="standard" value="{{standard}}" >
+        </td>
+        <td class="finput col s2">
+          <input type="text" name="haute" value="{{haute}}">
+        </td>
+      </tr>
+    </div>
+</template>

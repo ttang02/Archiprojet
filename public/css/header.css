@@ -1,0 +1,18 @@
+#header-nav{
+    background-color: #3B5998;
+}
+
+#bar-nav{
+    background-color : #1663c7;
+}
+
+.card .card-action{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.card > .card-content{
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.modal { width: 95% !important }

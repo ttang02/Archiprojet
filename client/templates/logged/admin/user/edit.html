@@ -1,0 +1,53 @@
+<template name="userEditModal">
+    <!-- Modal Trigger -->
+    <a id="trigger-edit-{{ _id }}" class="modal-trigger waves-effect waves-light secondary-content btn-floating tooltipped light-blue darken-1 hoverable" href="#modalEdit-{{ _id }}">
+		<i class="material-icons">mode_edit</i>
+	</a>
+
+    <!-- Modal Structure -->
+	<div id="modalEdit-{{ _id }}" class="modal modal-fixed-footer">
+	    <div class="modal-content">
+	       <h4 class="truncate">Modification de l'utilisateur : {{ profile.firstname }} {{ profile.lastname }}</h4>
+			<p>Vous pouvez modifier le rôle de l'utilisateur.</p>  
+			
+			<!-- Liste des projets -->
+			<div class="row">
+			    <div id="datList-{{ _id }}" class="col s12">
+			        <h5>Liste des projets</h5>
+			        <ul class="collection">
+			             {{#each dat}}
+			                 {{ >userDatItem }}
+			             {{/each}}
+			        </ul>
+			    </div>
+			</div>
+            
+            <!-- Modifier le rôle -->
+            <div class="row">
+			    <div id="datList-{{ _id }}" class="col s12">
+			        <h5>Liste des rôles</h5>
+			        <ul class="collection">
+			             {{#each role}}
+			                 {{ >userRoleItem }}
+			             {{/each}}
+			        </ul>
+			    </div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fermer</a>
+	    </div>
+	</div>
+</template>
+
+<template name="userDatItem">
+    <li class="collection-item">
+        {{ name }}
+    </li>
+</template>
+
+<template name="userRoleItem">
+    <li id="roleItem-{{ user._id }}-{{ _id }}" class="collection-item {{# if equals displayName user.profile.role }}light-blue lighten-4{{/ if }}">
+        {{ displayName }}
+    </li>
+</template>

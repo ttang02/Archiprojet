@@ -1,0 +1,137 @@
+<template name="addVolumetrie">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Volumétrie (données et fichiers)</h7>
+            </div>
+        </div>
+            <h7 style="text-align:center;">Volume données</h7>
+        <table>
+            <tbody>
+                {{#with volds }}
+                    <tr>{{> inputVolDonnes }}</tr>    
+                {{/with}}
+            </tbody>
+        </table>
+            <h7 style="text-align:center;">Volume Fichiers</h7>
+        <table>
+            <tbody>
+                
+                {{#with volfs }}
+                    <tr>{{> inputVolFichiers }}</tr>    
+                {{/with}}
+            </tbody>
+        </table>
+        <h7 style="text-align:center;">Réduction Volume</h7>
+        <table>
+            <tbody>
+                {{#with redvs }}
+                    <tr>{{> inputRedVol }}</tr>    
+                {{/with}}
+            </tbody>
+        </table>
+    </div>
+</template>
+
+<template name="inputVolDonnes">
+    <div class="card-action volDonneesitem" id="{{_id}}">
+        <tr class="fc col s12">
+            <td class="finput col s10">
+                <input type="text" value="Nombre enregistrements à récupérer" disabled>
+            </td>
+            <td class="finput col s2">
+                <input type="text" name="d1" value="{{d1}}" placeholder="" class="d1">
+            </td>
+        </tr>
+        <tr class="fc col s12">
+            <td class="finput col s10">
+                <input type="text" value="Nombre enregistrements / an" disabled>
+            </td>
+            <td class="finput col s2">
+                <input type="text" name="d2" value="{{d2}}" placeholder="" class="d2">
+            </td>
+        </tr>
+        <tr class="fc col s12">
+            <td class="finput col s10">
+                <input type="text" value="Nombre années enregistrements en base" disabled>
+            </td>
+            <td class="finput col s2">
+                <input type="text" name="d3" value="{{d3}}" placeholder="" class="d3">
+            </td>
+        </tr>
+        <tr class="fc col s12">
+            <td class="finput col s10">
+                <input type="text" value="Taille moyenne enregistrements (Ko)" disabled>
+            </td>
+            <td class="finput col s2">
+                <input type="text" name="d4" value="{{d4}}" placeholder="" class="d4">
+            </td>
+        </tr>
+    </div>
+</template>
+
+<template name="inputVolFichiers">
+    <div class="card-action volFichieritem" id="{{_id}}">
+        <tr class="fc col s12">
+            <td class="finput col s10">
+                <input type="text" value="Nombre de fichier à récupérer" disabled>
+            </td>
+            <td class="finput col s2">
+                <input type="text" name="f1" value="{{f1}}" placeholder="" class="f1">
+            </td>
+        </tr>
+        <tr class="fc col s12">
+            <td class="finput col s10">
+                <input type="text" value="Nombre fichiers / enregistrements" disabled>
+            </td>
+            <td class="finput col s2">
+                <input type="text" name="f2" value="{{f2}}" placeholder="" class="f2">
+            </td>
+        </tr>
+        <tr class="fc col s12">
+            <td class="finput col s10">
+                <input type="text" value="Nombre de fichiers / an" disabled>
+            </td>
+            <td class="finput col s2">
+                <input type="text" name="f3" value="{{f3}}" placeholder="" class="f3">
+            </td>
+        </tr>
+        <tr class="fc col s12">
+            <td class="finput col s10">
+                <input type="text" value="Durée de conservation des fichiers (ans)" disabled>
+            </td>
+            <td class="finput col s2">
+                <input type="text" name="f4" value="{{f4}}" placeholder="" class="f4">
+            </td>
+        </tr>
+        <tr class="fc col s12">
+            <td class="finput col s10">
+                <input type="text" value="Taille moyenne fichier (Mo)" disabled>
+            </td>
+            <td class="finput col s2">
+                <input type="text" name="f5" value="{{f5}}" placeholder="" class="f5">
+            </td>
+        </tr>
+    </div>    
+</template>
+
+<template name="inputRedVol">
+    <div class="card-action redVolitem" id="{{_id}}">
+        <tr class="fc col s12">
+            <td class="finput col s10">
+                <input type="text" value="Purge Base de données ou/et PJ" disabled>
+            </td>
+            <td class="finput col s2">
+                <input type="text" name="c1" value="{{#if equals true c1}}oui{{else}}non{{/if}}" placeholder="" class="c1">
+            </td>
+        </tr>
+        <tr class="fc col s12">
+            <td class="finput col s10">
+                <input type="text" value="Nombre enregistrements / an" disabled>
+            </td>
+            <td class="finput col s2">
+                <input type="text" name="c2" value="{{#if equals true c2}}oui{{else}}non{{/if}}" placeholder="" class="c2">
+            </td>
+        </tr>
+    </div>
+</template>

@@ -1,0 +1,57 @@
+<template name="addCRT">
+    <h5><center>Contraintes</center></h5>
+    <form>
+            {{ >addReglementaire }}
+            {{ >addSecurite }}
+            {{ >addDependance }}
+            {{ >addVolumetrie }}
+            {{ >accessibrut }}
+            {{ >addPostedeTravail }}
+            {{ >hebergementbrut }}
+      <center>
+        <a id="addCrtPrev" href=""><i class="fa fa-angle-left fa-3x" aria-hidden="true"></i></a>    
+        <a id="addCrt" href=""><i class="fa fa-home fa-3x" aria-hidden="true"></i></a>
+        <a id="addCrtNext" href=""><i class="fa fa-angle-right fa-3x" aria-hidden="true"></i></a>
+        </center>
+    </form>
+</template>
+
+<template name="accessibrut">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Sécurite</h7>
+            </div>
+        </div>
+         <table class="bordered">
+            <tbody>
+                <tr>
+                    <td class="col s3">
+                        RGAA
+                    </td>
+                    <td class="col s9">
+                        L'application doit être à minima "AA"
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Norme</b> Le RGAA concerne aussi bien les agents publics pour les applications métier, que le grand public et les fonctionnaires pour sites Internet, Intranet et les applications Web.<a href="https//references.modernisation.gouv.fr/rgaa-accessibilite/">https//references.modernisation.gouv.fr/rgaa-accessibilite/</a></p>
+    </div>
+</template>
+
+<template name="hebergementbrut">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Hébergement</h7>
+            </div>
+        </div>
+         <table class="bordered">
+            <tbody>
+                <tr>
+                    <td class="col s12">A reporter dans le tableau de bord après retour sur la RFC</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</template>

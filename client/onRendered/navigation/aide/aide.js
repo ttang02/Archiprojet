@@ -1,0 +1,3 @@
+Template.aide.onRendered(function(){
+  
+});

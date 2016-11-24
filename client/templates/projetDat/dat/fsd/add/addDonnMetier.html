@@ -1,0 +1,46 @@
+<template name="addDonMetier">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Données métier</h7>
+            </div>
+            </div>
+            <table>
+                <thead>
+                    <th data-field="fonc" class="col s7">Données métier</th>
+                    <th data-field="min" class="col s1">MIN</th>
+                    <th data-field="rie" class="col s1">RIE</th>
+                    <th data-field="ext" class="col s1">EXT</th>
+                    <th data-field="pub" class="col s1">PUB</th>
+                </thead>
+                <tbody>
+                    {{#each dms}}
+                       <tr>{{>inputdm}}</tr>
+                   {{/each}}
+                </tbody>
+            </table>                
+    </div>
+</template>
+
+<template name="inputdm">
+   <div class="card-action dmitem" id="{{_id}}">
+         <td class="finput col s7">
+            <input type="text" name="dm" value="{{name}}" placeholder="Donnée métier" class="dm">
+         </td>
+        <td class="finput col s1 min">
+            <input name="min" type="checkbox" id="{{_id}}-min" checked="{{#if min}}checked{{/if}}" /><label for="{{_id}}-min"></label>
+        </td>
+        <td class="finput col s1 rie">
+            <input name="rie" type="checkbox" id="{{_id}}-rie" checked="{{#if rie}}checked{{/if}}" /><label for="{{_id}}-rie"></label>
+        </td>
+        <td class="finput col s1 ext">
+            <input name="ext" type="checkbox" id="{{_id}}-ext" checked="{{#if ext}}checked{{/if}}"><label for="{{_id}}-ext"></label>
+        </td>
+        <td class="finput col s1 pub">
+            <input name="pub" type="checkbox" id="{{_id}}-pub" checked="{{#if pub}}checked{{/if}}" /><label for="{{_id}}-pub"></label>
+        </td>
+        <td class="input-field col s1">
+            <a href="" class="deleteDm"><i class="material-icons green-text text-accent-3">delete</i></a>
+         </td>
+      </div>
+</template>

@@ -1,0 +1,27 @@
+<template name="addReglementaire">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Réglémentaire</h7>
+            </div>
+        </div>
+        <table>
+            <tbody>
+                {{#each reglementaires }}
+                    <tr>{{> inputreg }}</tr>    
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>
+
+<template name="inputreg">
+    <div class="card-action objitem" id="{{_id}}">
+        <td class="finput col s11">
+            <input type="text" name="reg" value="{{name}}" placeholder="" class="reg">
+        </td>
+        <td class="input-field col s1">
+            <a href="" class="deleteReg"><i class="material-icons purple-text text-accent-3">delete</i></a>
+        </td>
+    </div>
+</template>

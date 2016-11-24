@@ -1,0 +1,27 @@
+<template name="addObjectif">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;"><center>Objectifs</center></h7>
+            </div>
+        </div>
+        <table>
+            <tbody>
+                {{#each objs}}
+                    <tr>{{> inputobj }}</tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>
+
+<template name="inputobj">
+    <div class="objitem" id="{{_id}}">
+        <td class="finput col s11">
+            <input type="text" name="obj" value="{{name}}" placeholder="Objectif" class="obj">
+        </td>
+        <td class="input-field col s1">
+            <a href="" class="deleteObj"><i class="material-icons purple-text text-accent-3">delete</i></a>
+        </td>
+    </div>
+</template>

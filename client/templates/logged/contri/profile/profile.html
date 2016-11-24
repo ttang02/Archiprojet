@@ -1,0 +1,21 @@
+<template name="profileContrib">
+    <div class="row">
+        <div id="account-edit">
+            
+            <div>
+                <h2>Vos détails</h2>
+                <form>
+                  {{#with profil}}
+                  <label for="firstname">Prénom</label>
+                  <input type="text" name="firstname" value="{{profile.firstname}}"/>
+                  <label for="lastname">Nom</label>
+                  <input type="text" name="lastname" value="{{profile.lastname}}"/>
+                  <label for="email">Email</label>
+                  <input type="email" name="email" value="{{profile.email}}"/>
+                  <button type="submit" class="waves-effect waves-light btn red">Sauvegarder</button>
+                  {{/with}}
+                </form>    
+            </div>
+        </div>
+    </div>
+</template>

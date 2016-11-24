@@ -1,0 +1,24 @@
+<template name="datAdd">
+    <!-- Modal Trigger -->
+    <div class="input-field col s4">
+    <a id="triggerAddDat" class="modal-trigger waves-effect waves-light btn" href="#modalAddDat">Ajouter un Projet</a>
+    </div>
+    
+    <!-- Modal structure -->
+    <div id="modalAddDat" class="modal">
+        <div class="modal-content">
+            <h4>Ajouter un projet</h4>
+            <form>
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" name="datName" class="validate" required="" aria-required="true"/>
+                        <label for="courseName">Nom du projet</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <a id="addDat" href="" class="modal-action modal-close waves-effect waves-green btn-flat">Ajouter</a>
+        </div>
+    </div>
+</template>

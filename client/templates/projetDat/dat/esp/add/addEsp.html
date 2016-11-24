@@ -1,0 +1,41 @@
+<template name="addESP">
+    <h5 style="text-align:center;">Eléments Structurants</h5>
+    <form>
+        {{ >addNomProjet }}
+        {{ >addObjectif }}    
+        {{ >addContexte }}
+        {{ >addEnjeux }}
+        {{ >addPlanning }}
+        {{ >addActeurProjet }}
+        {{ >addActeurUsager }}
+        <center>
+        <a id="addEsp" href=""><i class="fa fa-home fa-3x" aria-hidden="true"></i></a>
+        <a id="addEspNext" href=""><i class="fa fa-angle-right fa-3x" aria-hidden="true"></i></a>
+        </center>
+    </form>
+</template>
+
+<template name="addNomProjet">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <center><h7 style="text-align:center">Nom Projet</h7></center>
+            </div>
+        </div>
+        <table>
+            <tbody>
+                {{#with nomProjet}}
+                    <tr>{{> inputnomprojet}}</tr>
+                {{/with}}
+            </tbody>
+        </table>
+    </div>
+</template>
+
+<template name="inputnomprojet">
+    <div class="nomprojetitem" id="{{_id}}">
+        <td class="finput col s12">
+            <input type="text" value="{{nomProjet}}" name="nomProjet" class="nomProjet">
+        </td>
+    </div>
+</template>

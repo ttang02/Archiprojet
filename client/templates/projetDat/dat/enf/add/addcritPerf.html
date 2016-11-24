@@ -1,0 +1,37 @@
+<template name="addCritPerf">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Critères de performance de l'application</h7>
+            </div>
+        </div>
+            <table>
+                <thead>
+                    <th data-field="tdr" class="col s6">Temps de réponse</th>
+                    <th data-field="standard" class="col s3">Période standard</th>
+                     <th data-field="charge" class="col s3">Période de charge</th>
+                </thead>
+                <tbody>
+                    {{#each performance }}
+                    <tr>{{> inputcritPerf }}</tr>
+                    {{/each}}
+                </tbody>
+            </table>
+    </div>
+</template>
+
+<template name="inputcritPerf">
+    <div class="card-action critPerformanceitem" id="{{_id}}">
+      <tr class="fc col s12">
+        <td class="finput col s6">
+          <input type="text" value="{{typeperf}}" disabled>
+        </td>
+        <td class="finput col s3">
+          <input type="number" name="standard" value="{{standard}}" class="standard">
+        </td>
+        <td class="finput col s3">
+          <input type="number" name="charge" value="{{charge}}" class="charge">
+        </td>
+      </tr>
+    </div>
+</template>

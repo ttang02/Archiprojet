@@ -1,0 +1,21 @@
+<template name="adminViewUser">
+    <ul class="collection">
+        {{# each user }}
+			<li class="collection-item row valign-wrapper">
+				<div class="col s6 valign">
+					{{ profile.firstname }} {{ profile.lastname }} - {{ profile.role }}
+				</div>
+				<div class="col s3">
+					<div id="userEdit-{{ _id }}">
+						{{> userEditModal }}
+					</div>
+				</div>
+				<div class="col s3">
+					<div id="userDelete-{{ _id }}">
+						{{> userDeleteModal }}
+					</div>
+				</div>
+			</li>
+		{{/ each }}
+    </ul>
+</template>

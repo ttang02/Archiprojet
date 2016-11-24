@@ -1,0 +1,29 @@
+<template name="addEnjeux">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-content white-text">
+                <center><h7 style="text-align:center;">Enjeux projet</h7></center>
+            </div>
+        </div>
+        <table>
+            <tbody>
+            {{#each enjs}}
+                <tr>
+                {{> inputenj }}
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>
+
+<template name="inputenj">
+    <div class="card-action objitem" id="{{_id}}">
+        <td class="finput col s11">
+            <input type="text" name="enj" value="{{name}}" placeholder="Enjeux" class="enjeux"> 
+        </td>
+        <td class="input-field col s1">
+            <a href="" class="deleteEnj"><i class="material-icons purple-text text-accent-3">delete</i></a>
+        </td>
+    </div>
+</template>

@@ -1,0 +1,214 @@
+<template name="ficheProjet">
+    <div class="row">
+       <div class="input-field col s6">
+          <select name="selectProjet"  class="browser-default">
+              <option value="" disabled selected>Nom projet</option>
+              {{#each projets }}
+                  <option value="{{_id}}">{{name}}</option>
+              {{/each}}
+          </select>
+         </div>
+    </div>
+     {{ >ficheDetail }}
+</template>
+
+<template name="ficheDetail">
+    {{#with nameP }}
+        <div class="row">
+            <div class="col s12">
+                <div class="card-medium blue darken-1">
+                    <div class="card-title white-text">
+                        <h6 style="text-align:center;">{{name}}</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12">
+                <div class="fichecard card">
+                <!-- ESP -->
+                {{ >ficheEsp }}
+                <!-- FSD -->
+                {{ >ficheFsd }}
+                <!-- CRT -->
+                {{ >ficheCrt }}
+                <!-- ENF -->
+                {{ >ficheEnf }}
+                </div>        
+            </div>
+        </div>
+    {{/with }}
+</template>
+
+<template name="ficheEsp">
+        <div class="col s12 m6 l6">
+            <div class="card-medium blue darken-1">
+                <div class="card-title white-text">
+                    <center><h8 style="text-align:center">Eléments structurants projet</h8></center>
+                </div>
+            </div>
+            <!-- NOM DU PROJET -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Nom du projet</b></h7>
+                        {{#with nomprojet }}
+                            <p>{{name}}</p>
+                        {{/with }}
+                    </center>
+                </div>
+            </div>
+            <!-- OBJECTIFS -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Objectifs</b></h7>
+                        {{#each ficheObjectifs}}
+                            <p>{{name}}</p>
+                        {{/each }}
+                    </center>
+                </div>
+            </div>
+            <!-- CONTEXTE -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Contexte</b></h7>
+                        {{#each ficheContexte}}
+                            <p>{{name}}</p>
+                        {{/each }}
+                    </center>
+                </div>
+            </div>
+            <!-- ENJEUX -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Enjeux</b></h7>
+                        {{#each ficheEnjeux}}
+                            <p>{{name}}</p>
+                        {{/each }}
+                    </center>
+                </div>
+            </div>
+            <!-- PLANNING -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Planning</b></h7>
+                        <table>
+                            <thead>
+                                <th data-field="version" class="col s4">Version</th>
+                                <th data-field="date" class="col s4">Date (PROD)</th>
+                                <th data-field="commentaire" class="col s4">Commentaire</th>
+                            </thead>
+                            <tbody>
+                                {{#each fichePlanning }}
+                                <p>
+                                    <tr>
+                                    <td class="col s4">{{version}}</td>
+                                    <td class="col s4">{{date}}</td>
+                                    <td class="col s4">{{commentaire}}</td>
+                                    </tr>
+                                </p>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </center>
+                </div>
+            </div>
+            <!-- Acteur projet -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Acteur Projet</b></h7>
+                        <table>
+                            <thead>
+                                  <th data-field="acteur" class="col s3">Rôle</th>
+                                  <th data-field="name" class="col s3">Nom</th>
+                                  <th data-field="fonction" class="col s3">Fonction</th>
+                                  <th data-field="entite" class="col s3">Entite</th>
+                            </thead>
+                            <tbody>
+                            {{#each ficheacteurprojet}}
+                                <tr>
+                                    <td class="col s3">{{typeacteur typeActeur}}</td>
+                                    <td class="col s3">{{nom}}</td>
+                                    <td class="col s3">{{fonction}}</td>
+                                    <td class="col s3">{{entite}}</td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </center>
+                </div>
+            </div>
+        </div>
+</template>
+
+<template name="ficheFsd">
+    <div class="col s12 m6 l6">
+            <div class="card-medium blue darken-1">
+                <div class="card-title white-text">
+                    <center><h7 style="text-align:center">Nom Projet</h7></center>
+                </div>
+            </div>
+            <div class="col s12 m12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Nom du projet</b></h7>
+                        {{#with nomprojet }}
+                            <p>{{name}}</p>
+                        {{/with }}
+                    </center>
+                </div>
+            </div>
+            <div class="col s12 m12">
+                
+            </div>
+        </div>
+</template>
+
+<template name="ficheCrt">
+    <div class="col s12 m6 l6">
+            <div class="card-medium blue darken-1">
+                <div class="card-title white-text">
+                    <center><h7 style="text-align:center">Nom Projet</h7></center>
+                </div>
+            </div>
+            <div class="col s12 m12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Nom du projet</b></h7>
+                        {{#with nomprojet }}
+                            <p>{{name}}</p>
+                        {{/with }}
+                    </center>
+                </div>
+            </div>
+            <div class="col s12 m12">
+                
+            </div>
+        </div>
+</template>
+
+<template name="ficheEnf">
+    <div class="col s12 m16 l6">
+            <div class="card-medium blue darken-1">
+                <div class="card-title white-text">
+                    <center><h7 style="text-align:center">Nom Projet</h7></center>
+                </div>
+            </div>
+            <div class="col s12 m12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Nom du projet</b></h7>
+                        {{#with nomprojet }}
+                            <p>{{name}}</p>
+                        {{/with }}
+                    </center>
+                </div>
+            </div>
+            <div class="col s12 m12">
+                
+            </div>
+        </div>
+</template>

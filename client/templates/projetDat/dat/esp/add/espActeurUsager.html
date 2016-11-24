@@ -1,0 +1,48 @@
+<template name="addActeurUsager">
+    <div class="col s12">
+            <div class="card-medium blue darken-1">
+                <div class="card-content white-text">
+                    <h7 style="text-align:center;"><center>Acteurs Usager</center></h7>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <th data-field="acteur" class="col s3">Acteur Usager</th>
+                    <th data-field="min" class="col s2">MIN</th>
+                    <th data-field="price" class="col s2">RIE</th>
+                    <th data-field="min" class="col s2">EXT</th>
+                    <th data-field="price" class="col s2">PUB</th>
+                </thead>
+                <tbody>
+                    {{#each actusags }}
+                    <tr>
+                    {{> inputusag }}
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+    </div>
+</template>
+
+<template name="inputusag">
+    <div class="card-content actUItem" id="{{_id}}">
+        <td class="finput col s3">
+          <input type="text" class="validate acteurUsager" placeholder="Acteur Usager" name="acteur" value="{{name}}">
+        </td>
+        <td class="finput col s2">
+          <input type="number" placeholder="MIN" name="min" value="{{min}}" class="validate">
+        </td>
+        <td class="finput col s2">
+          <input type="number" placeholder="RIE" name="rie" value="{{rie}}" class="validate">
+        </td>
+        <td class="finput col s2">
+          <input type="number" placeholder="EXT" name="ext" value="{{ext}}" class="validate">
+        </td>
+        <td class="finput col s2">
+          <input type="number" placeholder="PUB" name="pub" value="{{pub}}" class="validate">
+        </td>
+        <td class="input-field col s1">
+            <a href="" class="deleteActU"><i class="material-icons purple-text text-accent-3">delete</i></a>
+        </td>
+    </div>
+</template>

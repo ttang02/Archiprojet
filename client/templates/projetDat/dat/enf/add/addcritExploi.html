@@ -1,0 +1,66 @@
+<template name="addCritExploit">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Critère d'exploitation de l'application</h7>
+            </div>
+        </div>
+            <table>
+                <thead>
+                    <th data-field="batch" class="col s4">Batch(s) Applicatifs</th>
+                    <th data-field="plage" class="col s2">Plage</th>
+                    <th data-field="frequence" class="col s2">Fréquence</th>
+                    <th data-field="impactm" class="col s2">Impact métier</th>
+                    <th data-field="impactc" class="col s2">Impact Charge</th>
+                </thead>
+                <tbody>
+                    {{#each batchs }}
+                    <tr>{{> inputcritExploiBatch }}</tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <p>Si Impact métier ou charge Batch sur l'application, précisez ci-dessous :</p>
+            <table>
+                <tbody>
+                    {{#each impact }}
+                    <tr>{{> inputcritExploiImpact }}</tr>
+                    {{/each}}
+                </tbody>
+            </table>
+    </div>
+</template>
+
+<template name="inputcritExploiBatch">
+    <div class="card-action critExploiBatchitem" id="{{_id}}">
+      <tr class="fc col s12">
+        <td class="finput col s4">
+          <input type="text" value="{{batch}}" name="batch" class="batch">
+        </td>
+        <td class="finput col s2">
+          <input type="text" name="plage" value="{{plage}}" >
+        </td>
+        <td class="finput col s2">
+          <input type="text" name="frequence" value="{{frequence}}">
+        </td>
+        <td class="finput col s2">
+          <input type="text" name="impactMetier" value="{{impactMetier}}">
+        </td>
+        <td class="finput col s2">
+          <input type="text" name="impactCharge" value="{{impactCharge}}">
+        </td>
+      </tr>
+    </div>
+</template>
+
+<template name="inputcritExploiImpact">
+    <div class="card-action critExploiImpactitem" id="{{_id}}">
+      <tr class="fc col s12">
+        <td class="finput col s3">
+          <input type="text" value="{{typeImpact}}" disabled>
+        </td>
+        <td class="finput col s9">
+          <input type="text" name="description" value="{{description}}" class="description">
+        </td>
+      </tr>
+    </div>
+</template>

@@ -1,0 +1,50 @@
+<template name="addRefDonnees">
+    <div class="col s12">
+        <div class="card-medium blue darken-1">
+            <div class="card-title white-text">
+                <h7 style="text-align:center;">Référentiels données</h7>
+            </div>
+        </div>
+            <table>
+                <thead>
+                    <th data-field="fonc" class="col s4">Référentiels données</th>
+                    <th data-field="fonc" class="col s3">Mode</th>
+                    <th data-field="min" class="col s1">M</th>
+                    <th data-field="rie" class="col s1">R</th>
+                    <th data-field="ext" class="col s1">E</th>
+                    <th data-field="pub" class="col s1">P</th>
+                </thead>
+                <tbody>
+                    {{#each rds}}
+                        <tr>{{>inputrd}}</tr>
+                    {{/each}}
+                </tbody>
+            </table>                
+    </div>
+</template>
+
+<template name="inputrd">
+   <div class="card-action rditem" id="{{_id}}">
+         <td class="finput col s4">
+            <input type="text" name="rd" value="{{name}}" placeholder="Référentiels données" class="rd">
+         </td>
+         <td class="finput col s3">
+            <input type="text" name="mode" value="{{name}}" placeholder="" class="mode">
+         </td>
+        <td class="finput col s1 min">
+            <input name="min" type="checkbox" id="{{_id}}-min" checked="{{#if min}}checked{{/if}}" /><label for="{{_id}}-min"></label>
+        </td>
+        <td class="finput col s1 rie">
+            <input name="rie" type="checkbox" id="{{_id}}-rie" checked="{{#if rie}}checked{{/if}}" /><label for="{{_id}}-rie"></label>
+        </td>
+        <td class="finput col s1 ext">
+            <input name="ext" type="checkbox" id="{{_id}}-ext" checked="{{#if ext}}checked{{/if}}"><label for="{{_id}}-ext"></label>
+        </td>
+        <td class="finput col s1 pub">
+            <input name="pub" type="checkbox" id="{{_id}}-pub" checked="{{#if pub}}checked{{/if}}" /><label for="{{_id}}-pub"></label>
+        </td>
+        <td class="input-field col s1">
+            <a href="" class="deleteRd"><i class="material-icons green-text text-accent-3">delete</i></a>
+         </td>
+      </div>
+</template>
