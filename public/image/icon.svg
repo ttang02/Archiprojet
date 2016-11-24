@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 528 477" style="enable-background:new 0 0 528 477;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#2A2849;}
+	.st2{fill:#3341BB;}
+	.st3{fill:none;stroke:#3341BB;stroke-miterlimit:10;}
+	.st4{fill:#CEC525;}
+	.st5{fill:#CC4415;}
+	.st6{fill:none;stroke:#CEC525;stroke-miterlimit:10;}
+	.st7{fill:none;stroke:#CC4415;stroke-miterlimit:10;}
+	.st8{fill:#3300AA;stroke:#3300AA;stroke-miterlimit:10;}
+	.st9{fill:none;stroke:#3300AA;stroke-miterlimit:10;}
+	.st10{fill:#0A0015;}
+	.st11{fill:#1500AA;}
+	.st12{fill:none;stroke:#1500AA;stroke-miterlimit:10;}
+	.st13{fill:#723348;}
+	.st14{fill:#BF0086;}
+	.st15{fill:#3C4A66;}
+	.st16{fill:none;stroke:#723348;stroke-miterlimit:10;}
+	.st17{fill:#6F00E9;stroke:#FFFFFF;stroke-miterlimit:10;}
+</style>
+<g id="Couleur_Fond">
+	<g>
+		<rect x="0.5" y="0.5" class="st0" width="527" height="476"/>
+		<path class="st1" d="M527,1v475H1V1H527 M528,0H0v477h528V0L528,0z"/>
+	</g>
+	<g>
+		<path class="st2" d="M122,11v134H12V11H122 M123,10H11v136h112V10L123,10z"/>
+	</g>
+	<g>
+		<line class="st3" x1="11" y1="22.5" x2="122" y2="22.5"/>
+	</g>
+	<g>
+		<rect x="141.5" y="10.5" class="st4" width="111" height="135"/>
+		<path class="st4" d="M252,11v134H142V11H252 M253,10H141v136h112V10L253,10z"/>
+	</g>
+	<g>
+		<rect x="272.5" y="10.5" class="st4" width="111" height="135"/>
+		<path class="st4" d="M383,11v134H273V11H383 M384,10H272v136h112V10L384,10z"/>
+	</g>
+	<g>
+		<rect x="403.5" y="10.5" class="st5" width="111" height="135"/>
+		<path class="st5" d="M514,11v134H404V11H514 M515,10H403v136h112V10L515,10z"/>
+	</g>
+	<g>
+		<line class="st6" x1="272" y1="22.5" x2="383" y2="22.5"/>
+	</g>
+	<g>
+		<line class="st7" x1="404" y1="22.5" x2="515" y2="22.5"/>
+	</g>
+	<rect x="10.5" y="170.5" class="st8" width="111" height="138"/>
+	<g>
+		<line class="st9" x1="11" y1="183.5" x2="122" y2="183.5"/>
+	</g>
+	<g>
+		<rect x="142.5" y="170.5" class="st10" width="241" height="137"/>
+		<path class="st10" d="M383,171v136H143V171H383 M384,170H142v138h242V170L384,170z"/>
+	</g>
+	<g>
+		<rect x="403.5" y="170.5" class="st11" width="111" height="137"/>
+		<path class="st11" d="M514,171v136H404V171H514 M515,170H403v138h112V170L515,170z"/>
+	</g>
+	<g>
+		<line class="st12" x1="404.5" y1="183.5" x2="514.5" y2="183.5"/>
+	</g>
+	<line class="st12" x1="389.5" y1="183.5" x2="389.5" y2="183.5"/>
+	<line class="st12" x1="404" y1="183.5" x2="406" y2="183.5"/>
+	<g>
+		<rect x="11.5" y="333.5" class="st13" width="111" height="134"/>
+		<path class="st13" d="M122,334v133H12V334H122 M123,333H11v135h112V333L123,333z"/>
+	</g>
+	<g>
+		<rect x="142.5" y="333.5" class="st14" width="239" height="134"/>
+		<path class="st14" d="M381,334v133H143V334H381 M382,333H142v135h240V333L382,333z"/>
+	</g>
+	<g>
+		<rect x="403.5" y="332.5" class="st15" width="110" height="134"/>
+		<path class="st15" d="M513,333v133H404V333H513 M514,332H403v135h111V332L514,332z"/>
+	</g>
+	<g>
+		<line class="st16" x1="11" y1="347.5" x2="122" y2="347.5"/>
+	</g>
+	<rect x="11.5" y="10.5" class="st17" width="111" height="136"/>
+</g>
+<g id="Form">
+</g>
+</svg>
