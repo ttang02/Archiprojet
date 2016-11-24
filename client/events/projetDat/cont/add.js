@@ -411,7 +411,7 @@ Template.addCRT.events({
         //Poste de travail 
         for (var i = 0; i < postedetravail.length; i++) {
             var id = postedetravail[i];
-            var valueType = $('#' + id + '> .finput > [name="selectPDT"]').val();
+            var valueType = $('#' + id + '> .finput > .select-wrapper > [name="selectPDT"]').val();
             var name = $('#' + id + '> .finput > input[name="nom"]').val();
             if (name === "") {
                 Meteor.call('deletePdT', id);

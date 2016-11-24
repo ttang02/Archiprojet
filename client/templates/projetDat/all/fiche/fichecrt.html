@@ -1,0 +1,93 @@
+<template name="ficheCrt">
+    <div class="col s12 m6 l6">
+            <div class="card-medium blue darken-1">
+                <div class="card-title white-text">
+                    <center><h7 style="text-align:center">Contraintes</h7></center>
+                </div>
+            </div>
+            <!-- Reglementaire -->
+            <div class="col s12 m12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Réglementaires</b></h7>
+                        {{#each ficheregl }}
+                            <p>{{name}}</p>
+                        {{/each }}
+                    </center>
+                </div>
+            </div>
+            <!-- Sécurité -->
+            <div class="col s12 m12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Sécurité</b></h7>
+                        {{#each fichesec }}
+                            <p>{{name}}</p>
+                        {{/each }}
+                    </center>
+                </div>
+            </div>
+            <!-- Dependance -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Dépendances avec autres systèmes (SI)</b></h7>
+                        <table>
+                            <thead>
+                                <th data-field="fonc" class="col s4">SI</th>
+                                <th data-field="con" class="col s4">Consommateur</th>
+                                <th data-field="fou" class="col s4">Fournisseur</th>
+                            </thead>
+                            <tbody>
+                            {{#each fichedepend}}
+                                <tr>
+                                    <td class="col s4">{{si}}</td>
+                                    <td class="col s4">{{consommateur}}</td>
+                                    <td class="col s4">{{fournisseur}}</td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </center>
+                </div>
+            </div>
+            <!--Volumetrie -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Volumétrie données</b></h7>
+                        {{#with fichevold }}
+                            <p>{{total}} GO </p>
+                        {{/with }}
+                        <h7><b>Volumétrie fichiers</b></h7>
+                        {{#with fichevolf }}
+                            <p>{{total}} GO</p>
+                        {{/with }}
+                        <h7><b>Réduction Volume</b></h7>
+                        {{#with ficheredv }}
+                            <p>Purge de base de données : {{redVolbool c1}}</p>
+                            <p>Archivage des données : {{redVolbool c2}}</p>
+                        {{/with }}
+                    </center>
+                </div>
+            </div>
+            <!-- Poste de travail -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Poste de travail</b></h7>
+                        <table>
+                            <tbody>
+                            {{#each fichepdt}}
+                                <tr>
+                                    <td class="col s4">{{typepdt typePdT}}</td>
+                                    <td class="col s7">{{name}}</td>
+                                </tr>
+                            {{/each}}
+                            </tbody>
+                        </table>
+                    </center>
+                </div>
+            </div>
+        </div>
+</template>

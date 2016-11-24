@@ -7,9 +7,8 @@ Meteor.methods({
     'updatePdT' : function(idPdT, typePdT, name){
         console.log("The method 'updatePdT' has been called!");
         console.log("ID Poste de Travail :"+idPdT);
-        
-        
-        return PostTravail.update({_id : idPdT}, {$set: {name : name}});
+        console.log("ID TYPE PDT :"+typePdT);
+        return PostTravail.update({_id : idPdT}, {$set: {typePdT : typePdT, name : name}});
     },
     'deletePdT' : function(idPdT){
         console.log("The method 'deletePdT' has been called!");

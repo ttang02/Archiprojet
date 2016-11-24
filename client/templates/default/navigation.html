@@ -2,7 +2,7 @@
   <header id="header">
 <nav>
 <div class="nav-wrapper col s12" id="header-nav">
-  <a href="{{pathFor 'home' }}" class="brand-logo"><img src="image/icon.svg" style="height:30px"/>ARCHIPROJ</a>
+  <a href="{{pathFor 'home' }}" class="brand-logo"><img src="image/icon.svg" style="height:30px"/>TBA</a>
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       {{#if currentUser }}
         {{# if isAttente currentUser.profile.role }}
@@ -10,16 +10,19 @@
         {{/if}}
         {{#if isAdmin currentUser.profile.role }}
             <li><a href="{{ pathFor 'adminBase' }}">Accueil</a></li>
+            <li><a href="{{ pathFor 'ficheProjet' }}">Fiche Projets</a></li>
             <li><a href="{{ pathFor 'adminUser' }}">Utilisateurs</a></li>
             <li><a href="#">Champs</a></li>
         {{/if}}
         {{#if isContributeur currentUser.profile.role}}
             <li><a href="{{ pathFor 'contriBase' }}">Accueil</a></li>
+            <li><a href="{{ pathFor 'ficheProjet' }}">Fiche Projets</a></li>
             <li><a href="{{ pathFor 'profileContrib' }}">Mon profil</a></li>
         {{/if}}
         <li class="logout"><a href="#">Déconnexion</a></li>
       {{ else}}
         <li><a href="{{ pathFor 'home' }}">Accueil</a></li>
+        <li><a href="{{ pathFor 'ficheProjet' }}">Fiche Projets</a></li>
         <li><a href="{{ pathFor 'register' }}">Enregistrement</a></li>
         <li><a href="{{ pathFor 'login' }}">Connexion</a></li>
       {{ /if }}
@@ -31,16 +34,19 @@
         {{/if}}
         {{#if isAdmin currentUser.profile.role }}
             <li><a href="{{ pathFor 'adminBase' }}">Accueil</a></li>
+            <li><a href="{{ pathFor 'ficheProjet' }}">Fiche Projets</a></li>
             <li><a href="{{ pathFor 'adminUser' }}">Utilisateurs</a></li>
             <li><a href="#">Champs</a></li>
         {{/if}}
         {{#if isContributeur currentUser.profile.role}}
             <li><a href="{{ pathFor 'contriBase' }}">Accueil</a></li>
+            <li><a href="{{ pathFor 'ficheProjet' }}">Fiche Projets</a></li>
             <li><a href="{{ pathFor 'profileContrib' }}">Mon profil</a></li>
         {{/if}}
         <li class="logout"><a href="#">Déconnexion</a></li>
       {{ else}}
         <li><a href="{{ pathFor 'home' }}">Accueil</a></li>
+        <li><a href="{{ pathFor 'ficheProjet' }}">Fiche Projets</a></li>
         <li><a href="{{ pathFor 'register' }}">Enregistrement</a></li><li>
           <a href="{{ pathFor 'login' }}">Connexion</a></li>
         {{ /if }}

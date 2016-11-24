@@ -1,0 +1,166 @@
+
+<template name="ficheFsd">
+    <div class="col s12 m6 l6">
+            <div class="card-medium blue darken-1">
+                <div class="card-title white-text">
+                    <center><h7 style="text-align:center">Fonctionnalités - Services - Données</h7></center>
+                </div>
+            </div>
+            <!-- Fonc métier -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Fonctionnalités métier</b></h7>
+                        <table>
+                            <thead>
+                                <th data-field="fonc" class="col s8">Fonctionnalités métier</th>
+                                <th data-field="min" class="col s1">M</th>
+                                <th data-field="rie" class="col s1">R</th>
+                                <th data-field="ext" class="col s1">E</th>
+                                <th data-field="pub" class="col s1">P</th>
+                            </thead>
+                            <tbody>
+                                {{#each fichefms }}
+                                <p>
+                                    <tr>
+                                        <td class="col s8">{{name}}</td>
+                                        <td class="col s1">{{fmetier min}}</td>
+                                        <td class="col s1">{{fmetier rie}}</td>
+                                        <td class="col s1">{{fmetier ext}}</td>
+                                        <td class="col s1">{{fmetier pub}}</td>
+                                    </tr>
+                                </p>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </center>
+                </div>
+            </div>
+            <!-- Données métier -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Données métier</b></h7>
+                        <table>
+                            <thead>
+                                <th data-field="fonc" class="col s8">Données métier</th>
+                                <th data-field="min" class="col s1">M</th>
+                                <th data-field="rie" class="col s1">R</th>
+                                <th data-field="ext" class="col s1">E</th>
+                                <th data-field="pub" class="col s1">P</th>
+                            </thead>
+                            <tbody>
+                                {{#each fichedms }}
+                                <p>
+                                    <tr>
+                                    <td class="col s8">{{name}}</td>
+                                    <td class="col s1">{{fmetier min}}</td>
+                                    <td class="col s1">{{fmetier rie}}</td>
+                                    <td class="col s1">{{fmetier ext}}</td>
+                                    <td class="col s1">{{fmetier pub}}</td>
+                                    </tr>
+                                </p>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </center>
+                </div>
+            </div>
+            <!-- Pieces Jointes metier -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Pièces jointes métier</b></h7>
+                        <table>
+                            <thead>
+                                <th data-field="fonc" class="col s4">Pièces jointes</th>
+                                <th data-field="fonc" class="col s4">Nombre</th>
+                                <th data-field="min" class="col s1"> M </th>
+                                <th data-field="rie" class="col s1"> R </th>
+                                <th data-field="ext" class="col s1"> E </th>
+                                <th data-field="pub" class="col s1"> P </th>
+                            </thead>
+                            <tbody>
+                                {{#each fichepjs }}
+                                <p>
+                                    <tr>
+                                    <td class="col s4">{{name}}</td>
+                                    <td class="col s4">{{nombre}}</td>
+                                    <td class="col s1">{{fmetier min}}</td>
+                                    <td class="col s1">{{fmetier rie}}</td>
+                                    <td class="col s1">{{fmetier ext}}</td>
+                                    <td class="col s1">{{fmetier pub}}</td>
+                                    </tr>
+                                </p>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </center>
+                </div>
+            </div>
+            <!-- Referentiels métier -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Référentiels données</b></h7>
+                        <table>
+                            <thead>
+                                <th data-field="fonc" class="col s4">Référentiels données</th>
+                                <th data-field="mode" class="col s4">Mode</th>
+                                <th data-field="min" class="col s1">M</th>
+                                <th data-field="rie" class="col s1">R</th>
+                                <th data-field="ext" class="col s1">E</th>
+                                <th data-field="pub" class="col s1">P</th>
+                            </thead>
+                            <tbody>
+                                {{#each ficherefs }}
+                                <p>
+                                    <tr>
+                                        <td class="col s4">{{name}}</td>
+                                        <td class="col s4">{{mode}}</td>
+                                        <td class="col s1">{{fmetier min}}</td>
+                                        <td class="col s1">{{fmetier rie}}</td>
+                                        <td class="col s1">{{fmetier ext}}</td>
+                                        <td class="col s1">{{fmetier pub}}</td>
+                                    </tr>
+                                </p>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </center>
+                </div>
+            </div>
+            <!-- Services connexes -->
+            <div class="col s12">
+                <div class="card-action">
+                    <center>
+                        <h7><b>Services connexes</b></h7>
+                        <table>
+                            <thead>
+                                <th data-field="fonc" class="col s4">Services connexes</th>
+                                <th data-field="mode" class="col s4">Mode</th>
+                                <th data-field="min" class="col s1">M</th>
+                                <th data-field="rie" class="col s1">R</th>
+                                <th data-field="ext" class="col s1">E</th>
+                                <th data-field="pub" class="col s1">P</th>
+                            </thead>
+                            <tbody>
+                                {{#each fichescs }}
+                                <p>
+                                    <tr>
+                                        <td class="col s4">{{name}}</td>
+                                        <td class="col s4">{{mode}}</td>
+                                        <td class="col s1">{{fmetier min}}</td>
+                                        <td class="col s1">{{fmetier rie}}</td>
+                                        <td class="col s1">{{fmetier ext}}</td>
+                                        <td class="col s1">{{fmetier pub}}</td>
+                                    </tr>
+                                </p>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </center>
+                </div>
+            </div>
+        </div>
+</template>

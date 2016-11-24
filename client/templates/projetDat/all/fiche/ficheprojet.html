@@ -1,0 +1,39 @@
+<template name="ficheProjet">
+    <div class="row">
+       <div class="input-field col s6">
+          <select name="selectProjet"  class="browser-default">
+              <option value="" disabled selected>Nom projet</option>
+              {{#each projets }}
+                  <option value="{{_id}}">{{name}}</option>
+              {{/each}}
+          </select>
+         </div>
+    </div>
+     {{ >ficheDetail }}
+</template>
+
+<template name="ficheDetail">
+    {{#with nameP }}
+        <div class="row">
+            <div class="col s12">
+                <div class="card-medium blue darken-1">
+                    <div class="card-title white-text">
+                        <h6 style="text-align:center;">{{name}}</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col s12">
+                <div class="fichecard card">
+                    <div class="col s12">
+                        {{ >ficheEsp }}
+                        {{ >ficheFsd }}
+                    </div>
+                    <div class="col s12">
+                        {{ >ficheCrt }}
+                        {{ >ficheEnf }}
+                    </div>
+                </div>        
+            </div>
+        </div>
+    {{/with }}
+</template>
