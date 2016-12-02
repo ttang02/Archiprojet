@@ -140,7 +140,7 @@ Template.addESP.events({
             var idObjCase = obj[i];
             //afficher valeur de la case
 
-            var valueInput = $('#' + idObjCase + '> .finput > input[name="obj"]').val();
+            var valueInput = $('#' + idObjCase + '> .finput > [name="obj"]').val();
             if (("" === valueInput)) {
                 Meteor.call('deleteObjectif', idObjCase);
             }
@@ -151,7 +151,7 @@ Template.addESP.events({
         //ENJEUX
         for (var i = 0; i < enj.length; i++) {
             var idEnjCase = enj[i];
-            var valueEnjInput = $('#' + idEnjCase + '> .finput > input[name="enj"]').val();
+            var valueEnjInput = $('#' + idEnjCase + '> .finput > [name="enj"]').val();
             if (("" === valueEnjInput)) {
                 Meteor.call('deleteEnjeux', idEnjCase);
             }
@@ -162,7 +162,7 @@ Template.addESP.events({
         //Contexte
         for (var i = 0; i < contexte.length; i++) {
             var idContexteCase = contexte[i];
-            var valueContexteInput = $('#' + idContexteCase + '> .finput > input[name="contexte"]').val();
+            var valueContexteInput = $('#' + idContexteCase + '> .finput > [name="contexte"]').val();
             if (("" === valueContexteInput)) {
                 Meteor.call('deleteContexte', idContexteCase);
             }
@@ -243,7 +243,7 @@ Template.addESP.events({
             var idObjCase = obj[i];
             //afficher valeur de la case
 
-            var valueInput = $('#' + idObjCase + '> .finput > input[name="obj"]').val();
+            var valueInput = $('#' + idObjCase + '> .finput > [name="obj"]').val();
             if (("" === valueInput)) {
                 Meteor.call('deleteObjectif', idObjCase);
             }
@@ -254,7 +254,7 @@ Template.addESP.events({
         //ENJEUX
         for (var i = 0; i < enj.length; i++) {
             var idEnjCase = enj[i];
-            var valueEnjInput = $('#' + idEnjCase + '> .finput > input[name="enj"]').val();
+            var valueEnjInput = $('#' + idEnjCase + '> .finput > [name="enj"]').val();
             if (("" === valueEnjInput)) {
                 Meteor.call('deleteEnjeux', idEnjCase);
             }
@@ -265,7 +265,7 @@ Template.addESP.events({
         //Contexte
         for (var i = 0; i < contexte.length; i++) {
             var idContexteCase = contexte[i];
-            var valueContexteInput = $('#' + idContexteCase + '> .finput > input[name="contexte"]').val();
+            var valueContexteInput = $('#' + idContexteCase + '> .finput > [name="contexte"]').val();
             if (("" === valueContexteInput)) {
                 Meteor.call('deleteContexte', idContexteCase);
             }
@@ -290,7 +290,7 @@ Template.addESP.events({
         //Acteur Projet
         for (var i = 0; i < actP.length; i++) {
             var idActPCase = actP[i];
-            var valueType = $('#' + idActPCase + '> [name="selectAP"]').val();
+            var valueType = $(' #' + idActPCase + '> .finput > .select-wrapper > [name="selectAP"]').val();
             var nom = $('#' + idActPCase + '> .finput > input[name="nom"]').val();
             var fonction = $('#' + idActPCase + '> .finput > input[name="fonction"]').val();
             var entite = $('#' + idActPCase + '> .finput > input[name="entite"]').val();

@@ -1,15 +1,12 @@
 <template name="adminBase">
 	<div class="row">
-		<h2 class="col s12">Accueil de l 'admin</h2>
-         <div class="col s8">
+		<h5 class="col s12">Accueil de l 'admin</h5>
+         <div class="col s12">
             <div class="row">
             	{{ > filterProjet }}
             	{{ > datAdd }}
             </div>
         {{ > viewProjet }}
-        </div>
-        <div class="col s2">
-            <!-- Bloc d'aide -->
         </div>
     </div>
 </template>

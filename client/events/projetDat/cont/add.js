@@ -55,7 +55,8 @@ Template.inputpdt.events({
                 Meteor.call('addPdTToCrt', idCrt, data);
             });
         }
-    }
+    },
+
 });
 
 Template.addCRT.events({
@@ -77,7 +78,7 @@ Template.addCRT.events({
         //Reglementaire 
         for (var i = 0; i < reglementaire.length; i++) {
             var id = reglementaire[i];
-            var name = $('#' + id + '> .finput > input[name="reg"]').val();
+            var name = $('#' + id + '> .finput > [name="reg"]').val();
             if (name === "") {
                 Meteor.call('deleteReglementaire', id);
             }
@@ -88,7 +89,7 @@ Template.addCRT.events({
         //Securite
         for (var i = 0; i < securite.length; i++) {
             var id = securite[i];
-            var name = $('#' + id + '> .finput > input[name="secu"]').val();
+            var name = $('#' + id + '> .finput > [name="secu"]').val();
             if (name === "") {
                 Meteor.call('deleteSecurite', id);
             }
@@ -159,7 +160,7 @@ Template.addCRT.events({
         //Poste de travail 
         for (var i = 0; i < postedetravail.length; i++) {
             var id = postedetravail[i];
-            var valueType = $('#' + id + '> .finput > [name="selectPDT"]').val();
+            var valueType = $(' #' + id + '> .finput > .select-wrapper > [name="selectPDT"]').val();
             var name = $('#' + id + '> .finput > input[name="nom"]').val();
             if (name === "") {
                 Meteor.call('deletePdT', id);
@@ -188,7 +189,7 @@ Template.addCRT.events({
         //Reglementaire 
         for (var i = 0; i < reglementaire.length; i++) {
             var id = reglementaire[i];
-            var name = $('#' + id + '> .finput > input[name="reg"]').val();
+            var name = $('#' + id + '> .finput > [name="reg"]').val();
             if (name === "") {
                 Meteor.call('deleteReglementaire', id);
             }
@@ -199,7 +200,7 @@ Template.addCRT.events({
         //Securite
         for (var i = 0; i < securite.length; i++) {
             var id = securite[i];
-            var name = $('#' + id + '> .finput > input[name="secu"]').val();
+            var name = $('#' + id + '> .finput > [name="secu"]').val();
             if (name === "") {
                 Meteor.call('deleteSecurite', id);
             }
@@ -329,7 +330,7 @@ Template.addCRT.events({
         //Reglementaire 
         for (var i = 0; i < reglementaire.length; i++) {
             var id = reglementaire[i];
-            var name = $('#' + id + '> .finput > input[name="reg"]').val();
+            var name = $('#' + id + '> .finput > [name="reg"]').val();
             if (name === "") {
                 Meteor.call('deleteReglementaire', id);
             }
@@ -340,7 +341,7 @@ Template.addCRT.events({
         //Securite
         for (var i = 0; i < securite.length; i++) {
             var id = securite[i];
-            var name = $('#' + id + '> .finput > input[name="secu"]').val();
+            var name = $('#' + id + '> .finput > [name="secu"]').val();
             if (name === "") {
                 Meteor.call('deleteSecurite', id);
             }
@@ -411,7 +412,7 @@ Template.addCRT.events({
         //Poste de travail 
         for (var i = 0; i < postedetravail.length; i++) {
             var id = postedetravail[i];
-            var valueType = $('#' + id + '> .finput > .select-wrapper > [name="selectPDT"]').val();
+            var valueType = $(' #' + id + '> .finput > .select-wrapper > [name="selectPDT"]').val();
             var name = $('#' + id + '> .finput > input[name="nom"]').val();
             if (name === "") {
                 Meteor.call('deletePdT', id);

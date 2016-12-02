@@ -84,3 +84,4 @@ Template.inputacteurproj.onRendered(function(){
 Template.inputpdt.onRendered(function(){
    $('select').material_select();
 });
+

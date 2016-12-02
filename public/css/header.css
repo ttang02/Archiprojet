@@ -17,3 +17,13 @@
 
 .modal { width: 95% !important }
 
+.btn-navigator {
+    width: 25px;
+    height: 25px;
+}
+textarea.custom-textarea {
+    padding : 0;
+}
+html {
+    font-family: Medium Content Serif Font;
+}
