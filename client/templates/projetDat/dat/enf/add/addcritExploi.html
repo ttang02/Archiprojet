@@ -1,17 +1,17 @@
 <template name="addCritExploit">
     <div class="col s12">
-        <div class="card-medium blue darken-1">
+        <div class="card-medium panel-color">
             <div class="card-title white-text">
                 <h7 style="text-align:center;">Critère d'exploitation de l'application</h7>
             </div>
         </div>
             <table>
-                <thead>
-                    <th data-field="batch" class="col s4">Batch(s) Applicatifs</th>
-                    <th data-field="plage" class="col s2">Plage</th>
-                    <th data-field="frequence" class="col s2">Fréquence</th>
-                    <th data-field="impactm" class="col s2">Impact métier</th>
-                    <th data-field="impactc" class="col s2">Impact Charge</th>
+                <thead class="blue darken-1 white-text">
+                    <th data-field="batch" class="col s4 nobold-table">Batch(s) Applicatifs</th>
+                    <th data-field="plage" class="col s2 nobold-table">Plage</th>
+                    <th data-field="frequence" class="col s2 nobold-table">Fréquence</th>
+                    <th data-field="impactm" class="col s2 nobold-table">Impact métier</th>
+                    <th data-field="impactc" class="col s2 nobold-table">Impact Charge</th>
                 </thead>
                 <tbody>
                     {{#each batchs }}

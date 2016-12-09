@@ -1,15 +1,15 @@
 <template name="addCritPerf">
     <div class="col s12">
-        <div class="card-medium blue darken-1">
+        <div class="card-medium panel-color">
             <div class="card-title white-text">
                 <h7 style="text-align:center;">Critères de performance de l'application</h7>
             </div>
         </div>
             <table>
-                <thead>
-                    <th data-field="tdr" class="col s6">Temps de réponse</th>
-                    <th data-field="standard" class="col s3">Période standard</th>
-                     <th data-field="charge" class="col s3">Période de charge</th>
+                <thead class="blue darken-1 white-text">
+                    <th data-field="tdr" class="col s6 nobold-table">Temps de réponse</th>
+                    <th data-field="standard" class="col s3 nobold-table">Période standard</th>
+                     <th data-field="charge" class="col s3 nobold-table">Période de charge</th>
                 </thead>
                 <tbody>
                     {{#each performance }}

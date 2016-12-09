@@ -393,8 +393,6 @@ Template.addCRT.events({
                 var f1 = Number($('#' + volF._id + '> .fc > .finput > input[name="f1"]').val());
                 var f2 = Number($('#' + volF._id + '> .fc > .finput > input[name="f2"]').val());
                 var f3 = Number($('#' + volF._id + '> .fc > .finput > input[name="f3"]').val());
-                var f4 = Number($('#' + volF._id + '> .fc > .finput > input[name="f4"]').val());
-                var f5 = Number($('#' + volF._id + '> .fc > .finput > input[name="f5"]').val());
 
                 if (f1 !== 0 && f2 !== 0 && f3 !== 0 && f4 !== 0 && f5 !== 0) {
                     Meteor.call('updateVolFichier', volF._id, f1, f2, f3, d1, d2);

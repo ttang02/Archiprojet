@@ -1,6 +1,6 @@
 <template name="addVolumetrie">
     <div class="col s12">
-        <div class="card-medium blue darken-1">
+        <div class="card-medium panel-color">
             <div class="card-title white-text">
                 <h7 style="text-align:center;">Volumétrie (données et fichiers)</h7>
             </div>
@@ -74,7 +74,7 @@
     <div class="card-action volFichieritem" id="{{_id}}">
         <tr class="fc col s12">
             <td class="finput col s10">
-                <input type="text" value="Nombre de fichier à récupérer" disabled>
+                <input type="text" value="Nombre fichiers / enregistrements (moyenne)" disabled>
             </td>
             <td class="finput col s2">
                 <input type="text" name="f1" value="{{f1}}" placeholder="" class="f1">
@@ -82,7 +82,7 @@
         </tr>
         <tr class="fc col s12">
             <td class="finput col s10">
-                <input type="text" value="Nombre fichiers / enregistrements" disabled>
+                <input type="text" value="Nombre années conservation fichiers" disabled>
             </td>
             <td class="finput col s2">
                 <input type="text" name="f2" value="{{f2}}" placeholder="" class="f2">
@@ -90,26 +90,10 @@
         </tr>
         <tr class="fc col s12">
             <td class="finput col s10">
-                <input type="text" value="Nombre de fichiers / an" disabled>
-            </td>
-            <td class="finput col s2">
-                <input type="text" name="f3" value="{{f3}}" placeholder="" class="f3">
-            </td>
-        </tr>
-        <tr class="fc col s12">
-            <td class="finput col s10">
-                <input type="text" value="Durée de conservation des fichiers (ans)" disabled>
-            </td>
-            <td class="finput col s2">
-                <input type="text" name="f4" value="{{f4}}" placeholder="" class="f4">
-            </td>
-        </tr>
-        <tr class="fc col s12">
-            <td class="finput col s10">
                 <input type="text" value="Taille moyenne fichier (Mo)" disabled>
             </td>
             <td class="finput col s2">
-                <input type="text" name="f5" value="{{f5}}" placeholder="" class="f5">
+                <input type="text" name="f3" value="{{f3}}" placeholder="" class="f3">
             </td>
         </tr>
     </div>    
