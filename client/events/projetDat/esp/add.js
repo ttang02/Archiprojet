@@ -204,7 +204,7 @@ Template.addESP.events({
         //Acteur Usager
         for (var i = 0; i < actU.length; i++) {
             var idActUCase = actU[i];
-            var acteur = $('#' + idActUCase + '> .finput > input[name="acteur"]').val();
+            var acteur = $('#' + idActUCase + '> .finput > [name="acteur"]').val();
             var min = $('#' + idActUCase + '> .finput > input[name="min"]').val();
             var rie = $('#' + idActUCase + '> .finput > input[name="rie"]').val();
             var ext = $('#' + idActUCase + '> .finput > input[name="ext"]').val();
@@ -304,7 +304,8 @@ Template.addESP.events({
         //Acteur Usager
         for (var i = 0; i < actU.length; i++) {
             var idActUCase = actU[i];
-            var acteur = $('#' + idActUCase + '> .finput > input[name="acteur"]').val();
+            var acteur = $('#' + idActUCase + '> .finput > [name="acteur"]').val();
+            console.log(acteur);
             var min = $('#' + idActUCase + '> .finput > input[name="min"]').val();
             var rie = $('#' + idActUCase + '> .finput > input[name="rie"]').val();
             var ext = $('#' + idActUCase + '> .finput > input[name="ext"]').val();

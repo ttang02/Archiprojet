@@ -24,3 +24,49 @@
 textarea.custom-textarea {
     padding : 0;
 }
+
+/**************************************/
+.image-icon {
+    background : url(../image/icon.svg) no-repeat;
+    height: 30px;
+}
+
+
+.image-min {
+    background : url(../image/usagers/min.png) no-repeat;
+    color : transparent;
+}
+.image-externe {
+    background : url('../image/usagers/externe.png') no-repeat;
+    color : transparent;
+}
+.image-public {
+    background : url(../image/usagers/public.png) no-repeat;
+    color : transparent;
+}
+.image-rie {
+    background : url(../image/usagers/rie.png) no-repeat;
+    color : transparent;
+}
+
+.image-m {
+    background : url(../image/usagers/m.png) no-repeat;
+    color : transparent;
+}
+.image-e {
+    background : url('../image/usagers/e.png') no-repeat;
+    color : transparent;
+}
+.image-p {
+    background : url(../image/usagers/p.png) no-repeat;
+    color : transparent;
+}
+.image-r {
+    background : url(../image/usagers/r.png) no-repeat;
+    color : transparent;
+}
+
+.image-esp {
+    background : url(../image/esp.png) no-repeat;
+    overflow: hidden;
+}

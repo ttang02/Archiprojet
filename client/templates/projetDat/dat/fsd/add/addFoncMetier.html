@@ -8,10 +8,10 @@
             <table>
                 <thead class="blue darken-1">
                     <th data-field="fonc" class="col s7 nobold-table white-text">Fonctionnalités métier</th>
-                    <th data-field="min" class="col s1 nobold-table red-text">M</th>
-                    <th data-field="rie" class="col s1 nobold-table red-text">R</th>
-                    <th data-field="ext" class="col s1 nobold-table orange-text">E</th>
-                    <th data-field="pub" class="col s1 nobold-table green-text">P</th>
+                    <th data-field="min" class="col s1 nobold-table image-m">M</th>
+                    <th data-field="rie" class="col s1 nobold-table image-r">R</th>
+                    <th data-field="ext" class="col s1 nobold-table image-e">E</th>
+                    <th data-field="pub" class="col s1 nobold-table image-p">P</th>
                 </thead>
                 <tbody>
                     {{#each fms}}
@@ -25,22 +25,22 @@
 <template name="inputfm">
    <div class="card-action fmitem" id="{{_id}}">
          <td class="finput col s7">
-            <input type="text" name="fm" value="{{name}}" placeholder="Fonctionnalité métier" class="fm">
+            <textarea placeholder="Fonctionnalité métier" value="{{name}}" name="fm" class="materialize-textarea custom-textarea fm"></textarea>
          </td>
-        <td class="finput col s1 min">
+        <td class="input-field finput col s1 min">
             <input name="min" type="checkbox" id="{{_id}}-min" checked="{{#if min}}checked{{/if}}" /><label for="{{_id}}-min"></label>
         </td>
-        <td class="finput col s1 rie">
+        <td class="input-field finput col s1 rie">
             <input name="rie" type="checkbox" id="{{_id}}-rie" checked="{{#if rie}}checked{{/if}}" /><label for="{{_id}}-rie"></label>
         </td>
-        <td class="finput col s1 ext">
+        <td class="input-field finput col s1 ext">
             <input name="ext" type="checkbox" id="{{_id}}-ext" checked="{{#if ext}}checked{{/if}}"><label for="{{_id}}-ext"></label>
         </td>
-        <td class="finput col s1 pub">
+        <td class="input-field finput col s1 pub">
             <input name="pub" type="checkbox" id="{{_id}}-pub" checked="{{#if pub}}checked{{/if}}" /><label for="{{_id}}-pub"></label>
         </td>
         <td class="input-field col s1">
-            <a href="" class="deleteFm"><i class="material-icons green-text text-accent-3">delete</i></a>
+            <a href="" class="deleteFm"><i class="material-icons trash-color">delete</i></a>
          </td>
       </div>
 </template>

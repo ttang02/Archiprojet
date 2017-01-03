@@ -1,12 +1,11 @@
 <template name="crt">
     {{#if equals statut 1}}
-    <a class="btn-floating green fcrt" href="{{ pathFor 'crt'}}"></a>
+    <a class="btn-floating btn-navigator green fcrt" href="{{ pathFor 'crt'}}"></a>
     {{/if}}
     {{#if equals statut 2}}
-    <a class="btn-floating orange fcrt" href="{{ pathFor 'crt'}}"></a>
+    <a class="btn-floating btn-navigator orange fcrt" href="{{ pathFor 'crt'}}"></a>
     {{/if}}
     {{#if equals statut 3}}
-    <a class="btn-floating red fcrt" href="{{ pathFor 'crt'}}"></a>
-    {{/if}}   
     <a class="btn-floating btn-navigator red fcrt" href="{{ pathFor 'crt'}}"></a>
+    {{/if}}   
 </template>

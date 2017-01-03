@@ -96,7 +96,7 @@ Template.addFSD.events({
     var name, min, ext, rie, pub, nombre;
     for (var i = 0; i < foncMetier.length; i++) {
       var idfmCase = foncMetier[i];
-      name = $('#' + idfmCase + '> .finput > input[name="fm"]').val();
+      name = $('#' + idfmCase + '> .finput > [name="fm"]').val();
       min = $('#' + idfmCase + '> .finput >  input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idfmCase + '> .finput >  input[name="rie"]').is(':checked') ? true : false;
       ext = $('#' + idfmCase + '> .finput >  input[name="ext"]').is(':checked') ? true : false;
@@ -111,7 +111,7 @@ Template.addFSD.events({
     //DM
     for (var i = 0; i < donnMetier.length; i++) {
       var idDmCase = donnMetier[i];
-      name = $('#' + idDmCase + '> .finput > input[name="dm"]').val();
+      name = $('#' + idDmCase + '> .finput > [name="dm"]').val();
       min = $('#' + idDmCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idDmCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
       ext = $('#' + idDmCase + '> .finput > input[name="ext"]').is(':checked') ? true : false;
@@ -126,7 +126,7 @@ Template.addFSD.events({
     //PJ 
     for (var i = 0; i < pjMetier.length; i++) {
       var idPjCase = pjMetier[i];
-      name = $('#' + idPjCase + '> .finput > input[name="pj"]').val();
+      name = $('#' + idPjCase + '> .finput > [name="pj"]').val();
       nombre = $('#' + idPjCase + '> .finput >input[name="nombre"]').val();
       min = $('#' + idPjCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idPjCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
@@ -142,7 +142,7 @@ Template.addFSD.events({
     //RD
     for (var i = 0; i < refDonnees.length; i++) {
       var idRDCase = refDonnees[i];
-      name = $('#' + idRDCase + '> .finput > input[name="rd"]').val();
+      name = $('#' + idRDCase + '> .finput > [name="rd"]').val();
       nombre = $('#' + idRDCase + '> .finput > input[name="nombre"]').val();
       min = $('#' + idRDCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idRDCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
@@ -158,7 +158,7 @@ Template.addFSD.events({
     //RD
     for (var i = 0; i < serviceConnexe.length; i++) {
       var idRDCase = serviceConnexe[i];
-      name = $('#' + idRDCase + '> .finput > input[name="sc"]').val();
+      name = $('#' + idRDCase + '> .finput > [name="sc"]').val();
       nombre = $('#' + idRDCase + '> .finput > input[name="mode"]').val();
       min = $('#' + idRDCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idRDCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
@@ -193,7 +193,7 @@ Template.addFSD.events({
     var name, min, ext, rie, pub, nombre;
     for (var i = 0; i < foncMetier.length; i++) {
       var idfmCase = foncMetier[i];
-      name = $('#' + idfmCase + '> .finput > input[name="fm"]').val();
+      name = $('#' + idfmCase + '> .finput > [name="fm"]').val();
       min = $('#' + idfmCase + '> .finput >  input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idfmCase + '> .finput >  input[name="rie"]').is(':checked') ? true : false;
       ext = $('#' + idfmCase + '> .finput >  input[name="ext"]').is(':checked') ? true : false;
@@ -208,7 +208,7 @@ Template.addFSD.events({
     //DM
     for (var i = 0; i < donnMetier.length; i++) {
       var idDmCase = donnMetier[i];
-      name = $('#' + idDmCase + '> .finput > input[name="dm"]').val();
+      name = $('#' + idDmCase + '> .finput > [name="dm"]').val();
       min = $('#' + idDmCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idDmCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
       ext = $('#' + idDmCase + '> .finput > input[name="ext"]').is(':checked') ? true : false;
@@ -223,7 +223,7 @@ Template.addFSD.events({
     //PJ 
     for (var i = 0; i < pjMetier.length; i++) {
       var idPjCase = pjMetier[i];
-      name = $('#' + idPjCase + '> .finput > input[name="pj"]').val();
+      name = $('#' + idPjCase + '> .finput > [name="pj"]').val();
       nombre = $('#' + idPjCase + '> .finput >input[name="nombre"]').val();
       min = $('#' + idPjCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idPjCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
@@ -239,7 +239,7 @@ Template.addFSD.events({
     //RD
     for (var i = 0; i < refDonnees.length; i++) {
       var idRDCase = refDonnees[i];
-      name = $('#' + idRDCase + '> .finput > input[name="rd"]').val();
+      name = $('#' + idRDCase + '> .finput > [name="rd"]').val();
       nombre = $('#' + idRDCase + '> .finput > input[name="nombre"]').val();
       min = $('#' + idRDCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idRDCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
@@ -255,7 +255,7 @@ Template.addFSD.events({
     //RD
     for (var i = 0; i < serviceConnexe.length; i++) {
       var idRDCase = serviceConnexe[i];
-      name = $('#' + idRDCase + '> .finput > input[name="sc"]').val();
+      name = $('#' + idRDCase + '> .finput > [name="sc"]').val();
       nombre = $('#' + idRDCase + '> .finput > input[name="mode"]').val();
       min = $('#' + idRDCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idRDCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
@@ -326,7 +326,7 @@ Template.addFSD.events({
     var name, min, ext, rie, pub, nombre;
     for (var i = 0; i < foncMetier.length; i++) {
       var idfmCase = foncMetier[i];
-      name = $('#' + idfmCase + '> .finput > input[name="fm"]').val();
+      name = $('#' + idfmCase + '> .finput > [name="fm"]').val();
       min = $('#' + idfmCase + '> .finput >  input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idfmCase + '> .finput >  input[name="rie"]').is(':checked') ? true : false;
       ext = $('#' + idfmCase + '> .finput >  input[name="ext"]').is(':checked') ? true : false;
@@ -341,7 +341,7 @@ Template.addFSD.events({
     //DM
     for (var i = 0; i < donnMetier.length; i++) {
       var idDmCase = donnMetier[i];
-      name = $('#' + idDmCase + '> .finput > input[name="dm"]').val();
+      name = $('#' + idDmCase + '> .finput > [name="dm"]').val();
       min = $('#' + idDmCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idDmCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
       ext = $('#' + idDmCase + '> .finput > input[name="ext"]').is(':checked') ? true : false;
@@ -356,7 +356,7 @@ Template.addFSD.events({
     //PJ 
     for (var i = 0; i < pjMetier.length; i++) {
       var idPjCase = pjMetier[i];
-      name = $('#' + idPjCase + '> .finput > input[name="pj"]').val();
+      name = $('#' + idPjCase + '> .finput > [name="pj"]').val();
       nombre = $('#' + idPjCase + '> .finput >input[name="nombre"]').val();
       min = $('#' + idPjCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idPjCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
@@ -372,7 +372,7 @@ Template.addFSD.events({
     //RD
     for (var i = 0; i < refDonnees.length; i++) {
       var idRDCase = refDonnees[i];
-      name = $('#' + idRDCase + '> .finput > input[name="rd"]').val();
+      name = $('#' + idRDCase + '> .finput > [name="rd"]').val();
       nombre = $('#' + idRDCase + '> .finput > input[name="nombre"]').val();
       min = $('#' + idRDCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idRDCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
@@ -388,7 +388,7 @@ Template.addFSD.events({
     //RD
     for (var i = 0; i < serviceConnexe.length; i++) {
       var idRDCase = serviceConnexe[i];
-      name = $('#' + idRDCase + '> .finput > input[name="sc"]').val();
+      name = $('#' + idRDCase + '> .finput > [name="sc"]').val();
       nombre = $('#' + idRDCase + '> .finput > input[name="mode"]').val();
       min = $('#' + idRDCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idRDCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;

@@ -85,3 +85,6 @@ Template.inputpdt.onRendered(function(){
    $('select').material_select();
 });
 
+Template.viewProjet.onRendered(function(){
+   $('.tooltipped').tooltip({}); 
+});

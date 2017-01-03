@@ -8,10 +8,10 @@
             <table>
                 <thead class="blue darken-1 white-text">
                     <th data-field="acteur" class="col s3 nobold-table">Acteur Usager</th>
-                    <th data-field="min" class="col s2 nobold-table">MIN</th>
-                    <th data-field="price" class="col s2 nobold-table">RIE</th>
-                    <th data-field="min" class="col s2 nobold-table">EXT</th>
-                    <th data-field="price" class="col s2 nobold-table">PUB</th>
+                    <th data-field="min" class="col s2 nobold-table image-min">MIN</th>
+                    <th data-field="rie" class="col s2 nobold-table image-rie">RIE</th>
+                    <th data-field="ext" class="col s2 nobold-table image-externe">EXT</th>
+                    <th data-field="pub" class="col s2 nobold-table image-public">PUB</th>
                 </thead>
                 <tbody>
                     {{#each actusags }}
@@ -27,7 +27,7 @@
 <template name="inputusag">
     <div class="card-content actUItem" id="{{_id}}">
         <td class="finput col s3">
-          <input type="text" class="validate acteurUsager" placeholder="Acteur Usager" name="acteur" value="{{name}}">
+          <textarea class="materialize-textarea custom-textarea validate acteurUsager" placeholder="Acteur Usager" name="acteur" value="{{name}}"></textarea>
         </td>
         <td class="finput col s2">
           <input type="number" placeholder="MIN" name="min" value="{{min}}" class="validate">
@@ -42,7 +42,7 @@
           <input type="number" placeholder="PUB" name="pub" value="{{pub}}" class="validate">
         </td>
         <td class="input-field col s1">
-            <a href="" class="deleteActU"><i class="material-icons purple-text text-accent-3">delete</i></a>
+            <a href="" class="deleteActU"><i class="material-icons trash-color">delete</i></a>
         </td>
     </div>
 </template>
