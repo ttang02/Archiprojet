@@ -55,5 +55,9 @@ Template.registerBase.events({
 		    }
 
 		}
+   },
+   //keypress interdire la saisie des ascii
+   'keypress .username' : function(event){
+		if((event.charCode < 97 || event.charCode > 122) && (event.charCode < 65 || event.charCode > 90) && (event.charCode < 48 || event.charCode > 57)) return false;
    }
 });

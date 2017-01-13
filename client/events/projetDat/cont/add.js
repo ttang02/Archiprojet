@@ -58,6 +58,32 @@ Template.inputpdt.events({
     },
 
 });
+Template.inputVolDonnes.events({
+   'keypress .d1' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   },
+   'keypress .d2' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   },
+   'keypress .d3' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   },
+   'keypress .d4' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   }
+});
+
+Template.inputVolFichiers.events({
+   'keypress .f1' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   },
+   'keypress .f2' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   },
+   'keypress .f3' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   }
+});
 
 Template.addCRT.events({
     'click #addCrt': function() {

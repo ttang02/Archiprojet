@@ -95,6 +95,7 @@ Template.inputacteurproj.events({
         }
     }*/
 });
+/*************************************************************************************************************/
 
 Template.inputusag.events({
     'focus .acteurUsager': function(event) {
@@ -108,7 +109,20 @@ Template.inputusag.events({
                 Meteor.call('addAUToEsp', idEsp, data);
             });
         }
-    }
+    },
+    //keypress interdire la saisie des ascii
+   'keypress .min' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   },
+    'keypress .rie' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   },
+    'keypress .pub' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   },
+    'keypress .ext' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   }
 });
 
 

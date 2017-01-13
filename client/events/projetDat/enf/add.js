@@ -17,6 +17,15 @@ Template.inputcritExploiBatch.events({
         }
     }
 });
+Template.inputcritPerf.events({
+    'keypress .standard' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   },
+   'keypress .charge' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   } 
+});
+
 
 Template.addENF.events({
     'click #addEnf': function() {

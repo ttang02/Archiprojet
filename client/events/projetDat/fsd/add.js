@@ -41,7 +41,10 @@ Template.inputpj.events({
         Meteor.call('addPjToFsd', idFsd, data);
       });
     }
-  }
+  },
+  'keypress .nombre' : function(event){
+		if((event.charCode < 48 || event.charCode > 57)) return false;
+   }
 });
 //inputrd
 Template.inputrd.events({
