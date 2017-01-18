@@ -111,7 +111,7 @@ Template.addENF.events({
                 }
             }
             for (i = 0; i < impact.length; i++) {
-                var descriptionInput = $('#' + impact[i] + '> .fc > .finput > input[name="description"]').val();
+                var descriptionInput = $('#' + impact[i] + '> .fc > .finput > [name="description"]').val();
 
                 Meteor.call('updatecritExploiImpact', impact[i], descriptionInput);
             }
@@ -201,7 +201,7 @@ Template.addENF.events({
                 }
             }
             for (i = 0; i < impact.length; i++) {
-                var descriptionInput = $('#' + impact[i] + '> .fc > .finput > input[name="description"]').val();
+                var descriptionInput = $('#' + impact[i] + '> .fc > .finput > [name="description"]').val();
 
                 Meteor.call('updatecritExploiImpact', impact[i], descriptionInput);
             }

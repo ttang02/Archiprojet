@@ -1,3 +1,5 @@
+import Cleave from 'cleave.js';
+
 Template.datAdd.onRendered(function () {
     $('#triggerAddDat').leanModal({
       dismissible: true, // Modal can be dismissed by clicking outside of the modal
@@ -87,4 +89,11 @@ Template.inputpdt.onRendered(function(){
 
 Template.viewProjet.onRendered(function(){
    $('.tooltipped').tooltip({}); 
+});
+
+Template.inputplanning.onRendered(function(){
+   new Cleave('.date', {
+       date : true,
+       datePattern : ['d','m','Y']
+   });
 });

@@ -25,3 +25,4 @@ iron:router
 session
 accounts-password
 fortawesome:fontawesome
+ostrio:files
