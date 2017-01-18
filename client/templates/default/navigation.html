@@ -1,6 +1,4 @@
 <template name="defaultNavigation">
-
-    
   <ul id="slide-menu" class="side-nav">
       {{#if currentUser }}
         {{# if isAttente currentUser.profile.role }}
@@ -29,7 +27,7 @@
     <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper col s12" id="header-nav">
-        <a href="{{pathFor 'home' }}" class="brand-logo"><img src="image/icon.svg" style="height:30px"/>TBA</a>
+        <a href="{{pathFor 'home' }}" class="brand-logo"><img src="/image/icon.svg" style="height:30px"/>TBA</a>
         <ul class="right">
           <li><a data-activates="slide-menu" class="my-btn" href="#"><i class="material-icons">menu</i></a></li>
         </ul>
