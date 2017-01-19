@@ -52,6 +52,9 @@ textarea.custom-textarea {
 .image-m {
     background : url(../image/usagers/m.png) no-repeat;
     color : transparent;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .image-e {
     background : url('../image/usagers/e.png') no-repeat;
@@ -69,4 +72,8 @@ textarea.custom-textarea {
 .image-esp {
     background : url(../image/esp.png) no-repeat;
     overflow: hidden;
+}
+
+.center-image{
+    margin-right: 18px;
 }

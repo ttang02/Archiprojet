@@ -1,13 +1,13 @@
 <template name="addDonMetier">
     <div class="col s12">
-        <div class="card-medium panel-color">
+        <div class="card-medium blue darken-1">
             <div class="card-title white-text">
-                <h7 style="text-align:center;">Données métier</h7>
+                <h7 style="text-align:center;color : transparent;">Données </h7>
             </div>
             </div>
             <table>
                 <thead class="blue darken-1">
-                    <th data-field="fonc" class="col s7 nobold-table white-text">Données métier</th>
+                    <th data-field="fonc" class="col s7 nobold-table white-text center-image">Données</th>
                     <th data-field="min" class="col s1 nobold-table image-m">M</th>
                     <th data-field="rie" class="col s1 nobold-table image-r">R</th>
                     <th data-field="ext" class="col s1 nobold-table image-e">E</th>
@@ -25,7 +25,7 @@
 <template name="inputdm">
    <div class="card-action dmitem" id="{{_id}}">
         <td class="finput col s7">
-            <textarea placeholder="Donnée métier" value="{{name}}" name="dm" class="materialize-textarea custom-textarea dm"></textarea>
+            <textarea placeholder="Données" value="{{name}}" name="dm" class="materialize-textarea custom-textarea dm"></textarea>
          </td>
         <td class="input-field finput col s1 min">
             <input name="min" type="checkbox" id="{{_id}}-min" checked="{{#if min}}checked{{/if}}" /><label for="{{_id}}-min"></label>

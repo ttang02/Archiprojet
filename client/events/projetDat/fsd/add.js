@@ -130,7 +130,6 @@ Template.addFSD.events({
     for (var i = 0; i < pjMetier.length; i++) {
       var idPjCase = pjMetier[i];
       name = $('#' + idPjCase + '> .finput > [name="pj"]').val();
-      nombre = $('#' + idPjCase + '> .finput >input[name="nombre"]').val();
       min = $('#' + idPjCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idPjCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
       ext = $('#' + idPjCase + '> .finput > input[name="ext"]').is(':checked') ? true : false;
@@ -139,7 +138,7 @@ Template.addFSD.events({
         Meteor.call('deletePJ', idPjCase);
       }
       else {
-        Meteor.call('updatePJ', idPjCase, name, nombre, min, rie, ext, pub);
+        Meteor.call('updatePJ', idPjCase, name, min, rie, ext, pub);
       }
     }
     //RD
@@ -227,7 +226,6 @@ Template.addFSD.events({
     for (var i = 0; i < pjMetier.length; i++) {
       var idPjCase = pjMetier[i];
       name = $('#' + idPjCase + '> .finput > [name="pj"]').val();
-      nombre = $('#' + idPjCase + '> .finput >input[name="nombre"]').val();
       min = $('#' + idPjCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idPjCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
       ext = $('#' + idPjCase + '> .finput > input[name="ext"]').is(':checked') ? true : false;
@@ -236,7 +234,7 @@ Template.addFSD.events({
         Meteor.call('deletePJ', idPjCase);
       }
       else {
-        Meteor.call('updatePJ', idPjCase, name, nombre, min, rie, ext, pub);
+        Meteor.call('updatePJ', idPjCase, name, min, rie, ext, pub);
       }
     }
     //RD
@@ -360,7 +358,6 @@ Template.addFSD.events({
     for (var i = 0; i < pjMetier.length; i++) {
       var idPjCase = pjMetier[i];
       name = $('#' + idPjCase + '> .finput > [name="pj"]').val();
-      nombre = $('#' + idPjCase + '> .finput >input[name="nombre"]').val();
       min = $('#' + idPjCase + '> .finput > input[name="min"]').is(':checked') ? true : false;
       rie = $('#' + idPjCase + '> .finput > input[name="rie"]').is(':checked') ? true : false;
       ext = $('#' + idPjCase + '> .finput > input[name="ext"]').is(':checked') ? true : false;
@@ -369,7 +366,7 @@ Template.addFSD.events({
         Meteor.call('deletePJ', idPjCase);
       }
       else {
-        Meteor.call('updatePJ', idPjCase, name, nombre, min, rie, ext, pub);
+        Meteor.call('updatePJ', idPjCase, name, min, rie, ext, pub);
       }
     }
     //RD
